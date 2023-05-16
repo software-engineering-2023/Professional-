@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+    .container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #006884;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: white;
+    }
+  
+    h2 {
+      text-align: center;
+      color: #053D57;
+    }
+  
+    form {
+      margin-bottom: 15px;
+    }
+  
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+      color: white;
+    }
+  
+    button {
+      width: 100%;
+      padding: 10px;
+      background: none; /* Remove the background color */
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
   <title>Login</title>
   <link rel="stylesheet" type="text/css" href="LoginStyles.css">
 </head>
 <body>
   <div class="container">
-    <h2>Login</h2>
+    <h2 style="color: white;">Login</h2>
     <form id="loginForm">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
@@ -14,12 +54,23 @@
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
       
-      <button type="submit">Login</button>
+      <input type="button" value="Login" onclick="validate()" style="background-color: #053D57;">
     </form>
-    <p>Not registered? <a href="signup.html">Sign up</a></p>
-    <p><a href="resetpassword.html">Reset password</a></p>
+    <p style="color: white;">Not registered? <a href="signup.html" style="color: white;">Sign up</a></p>
+    <p style="color: white;"><a href="resetpassword.html" style="color: white;">Reset password</a></p>
   </div>
   
-  <script src="script.js"></script>
+  <script>
+    function validate() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username === "admin" && password === "admin") {
+        window.location.href = "homeadmin.html";
+      } else {
+        alert("Invalid username or password");
+      }
+    }
+  </script>
 </body>
 </html>
