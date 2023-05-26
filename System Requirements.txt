@@ -1,0 +1,45 @@
+﻿System Requirements:
+
+Home page containing a bar at the top with login - register - contact us- etc. and other functionalities of our website in the page
+
+Register/Login page
+
+Different logged in pages for admin, banker, and client explained below:
+
+Client:
+	Notification section which contains any notifications received
+
+	Credit card:
+	He can apply for credit cards by entering the required info
+	Can view the credit cards he has, and has button to view credit card details, leading to transactions of this credit card and the 	
+	points it has, with redeem points button
+	In view credit card details, he can also report this credit card for theft/loss/damage
+	
+	Loan:
+	He can apply for loans by entering the info
+	Client can view the loans he currently needs to pay
+	
+	Bank accounts:
+	He can view bank account transactions (button in the view bank accounts page)
+	Client will be hard coded to have 3 bank accounts
+
+	Bills:
+	He can view all bills and each one has a button to pay it, and a text box to enter the amount to be paid, and a button to set or 	
+	delete reminder, each one also has the type of bill (water, electricity, credit card, etc)
+	
+	Transfer money page with drop down to choose account type (domestic, internal, international)
+
+Banker:
+	Banker can view bank account requests (with accept/reject)
+	He can also view credit card requests (with accept/reject)
+	He can also view loan requests (with accept/reject)
+	Can view credit card theft/damage/loss requests
+	Can view credit card transactions
+	Send bank announcements
+
+Admin:
+	Add banker
+	View technical issues (and resolve them) 
+	Send notification if resolved
+
+	And a report technical issue in all pages
