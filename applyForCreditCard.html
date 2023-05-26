@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Credit Card Application</title>
+  <style>
+    body {
+      background-color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: gold;
+    }
+
+    h2 {
+      color: gold;
+      text-align: left;
+    }
+
+    .form-container {
+      margin: 0 auto;
+      max-width: 500px;
+      padding: 20px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: gold;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    label {
+      color: gold;
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .button {
+      background-color: gold;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .success-container {
+      margin: 0 auto;
+      max-width: 500px;
+      padding: 20px;
+    }
+
+    .success-message {
+      color: gold;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Credit Card Application</h1>
+
+    <!-- Page 1: Personal Information -->
+    <div id="page1">
+      <h2>Personal Information</h2>
+      <form action="#" method="POST">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="middleName">Middle Name</label>
+        <input type="text" id="middleName" name="middleName">
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" required>
+
+        <label for="city">City/District</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required>
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="ssn">Social Security Number</label>
+        <input type="text" id="ssn" name="ssn" required>
+
+        <div class="buttons-container">
+          <button class="button" type="button" disabled>Back</button>
+          <button class="button" type="button" onclick="showPage(2)">Next</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Page 2: Financial Information -->
+    <div id="page2" style="display: none;">
+      <h2>Financial Information</h2>
+      <form action="#" method="POST">
+        <label for="income">Annual Income</label>
+        <input type="text" id="income" name="income" required>
+
+        <label for="employmentStatus">Employment Status</label>
+        <select id="employmentStatus" name="employmentStatus" required>
+          <option value="" disabled selected>Select</option>
+          <option value="employed">Employed</option>
+          <option value="self-employed">Self-Employed</option>
+          <option value="unemployed">Unemployed</option>
+        </select>
+
+        <label for="occupation">Occupation</label>
+        <input type="text" id="occupation" name="occupation" required>
+
+        <div class="buttons-container">
+          <button class="button" type="button" onclick="showPage(1)">Back</button>
+          <button class="button" type="button" onclick="showPage(3)">Next</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Page 3: Card Options -->
+    <div id="page3" style="display: none;">
+      <h2>Card Options</h2>
+      <form action="#" method="POST">
+        <label for="cardType">Card Type</label>
+        <select id="cardType" name="cardType" required>
+          <option value="" disabled selected>Select</option>
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="amex">American Express</option>
+        </select>
+
+        <label for="creditLimit">Credit Card Limit</label>
+        <input type="text" id="creditLimit" name="creditLimit" required>
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I have read and agree to the terms and conditions of this credit card offer.</label>
+        </div>
+
+        <div class="buttons-container">
+          <button class="button" type="button" onclick="showPage(2)">Back</button>
+          <button class="button" type="submit" onclick="submitForm()">Submit Application</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Success Page -->
+    <div id="success" style="display: none;" class="success-container">
+      <h2 style="color: gold;">Application Submitted Successfully</h2>
+      <p class="success-message" style="color: gold;">Thank you for submitting your application!</p>
+      <button class="button" onclick="returnToHomePage()">Return to Home Page</button>
+    </div>
+  </div>
+
+  <script>
+    function showPage(pageNumber) {
+      var pages = document.querySelectorAll('.form-container > div');
+      for (var i = 0; i < pages.length; i++) {
+        if (i + 1 === pageNumber) {
+          pages[i].style.display = 'block';
+        } else {
+          pages[i].style.display = 'none';
+        }
+      }
+
+      var backButton = document.querySelector('.buttons-container button:first-child');
+      var nextButton = document.querySelector('.buttons-container button:last-child');
+
+      if (pageNumber === 1) {
+        backButton.disabled = true;
+        nextButton.disabled = false;
+      } else if (pageNumber === pages.length) {
+        backButton.disabled = false;
+        nextButton.disabled = true;
+      } else {
+        backButton.disabled = false;
+        nextButton.disabled = false;
+      }
+    }
+
+    function submitForm() {
+      // Perform form submission logic here
+
+      // Show success page
+      showPage(4);
+    }
+
+    function returnToHomePage() {
+      // Redirect to the home page (index.html)
+      window.location.href = 'index.html';
+    }
+
+    showPage(1);
+  </script>
+</body>
+</html>
