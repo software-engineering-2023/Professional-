@@ -39,7 +39,7 @@ Banker:  -----> Bahy
 	He can also view loan requests (with accept/reject)
 	Can view credit card theft/damage/loss requests
 	Can view credit card transactions
-	Send bank announcements
+	Send bank announcements     DONE
 
 
 Admin:   -----> Nour
