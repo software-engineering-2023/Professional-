@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" href="css/homeadmin.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- Responsive-->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="images/fevicon.png" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    
+    <title>Add Banker</title>
+</head>
+
+
+  
+
+
+<body>
+    <div class="header_section">
+        <div class="header_left">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Logout</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">Profile</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services</a>
+                </li> -->
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tech.html">Report a problem</a>
+                </li> -->
+              </ul>
+            </div>
+          </nav>
+
+         
+          
+        </div>
+        <div class="header_right">
+          <img src="images/banner-img.png" class="banner_img" >
+        </div>
+      </div>
+      <div class="form">
+
+
+     
+
+        <form action="transfer.php" method="post">
+          <label for="from_account">Banker Name:</label>
+          <input type="text" id="from_account" name="from_account">
+  
+          <label for="from_account">Username:</label>
+          <input type="text" id="from_account" name="from_account">
+          <label for="to_account" style="margin-top: 13px;">Password</label>
+          <input type="password" id="to_account" name="to_account">
+         
+        <button class="submit" onclick="generateReport()"> Add</button>
+        </form>
+
+
+
+      </div>
+      
+
+   
+    
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+<style>
+
+</style>
+
+<script>
+function generateReport() {
+    // Generate a report for the specified card number
+    // Implement your report generation logic here
+    alert('Banker added successfully ');
+  }
+</script>
