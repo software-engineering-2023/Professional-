@@ -35,7 +35,7 @@ Client:
 
 Banker:  -----> Bahy
 	Banker can view bank account requests (with accept/reject)
-	He can also view credit card requests (with accept/reject)
+	He can also view credit card requests (with accept/reject)   DONE
 	He can also view loan requests (with accept/reject)
 	Can view credit card theft/damage/loss requests   DONE
 	Can view credit card transactions
