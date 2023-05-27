@@ -33,6 +33,7 @@
 <link rel="stylesheet" type="text/css" href="css/submitButton.css">
 <link rel="stylesheet" type="text/css" href="css/drop down.css">
 <link rel="stylesheet" type="text/css" href="css/noti.css">
+<link rel="stylesheet" type="text/css" href="css/slide.css">
 
   
 
@@ -41,15 +42,21 @@
 </head>
 <body style="background-color: rgb(248, 249, 250);">
     <div class="header_section header_bg">
-        <div class="sidebar" style="background-color: rgb(240, 240, 240); width: 10%; ">
-            <ul>
-              <li><a href="Send Notification.html" style="font-weight: bold; font-size: large;">Home</a></li>
-              <li><a href="#"style="font-weight: bold; font-size: large;">View 1</a></li>
-              <li><a href="#"style="font-weight: bold; font-size: large;">View 2</a></li>
-              <li><a href="#"style="font-weight: bold; font-size: large;">View 3</a></li>
-              <li><a href="#"style="font-weight: bold; font-size: large;">View 4</a></li>
-            </ul>
-          </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <ul>
+                      
+                      <li><a href="Send Notification.html" style="font-weight: bold; font-size: large;">Home</a></li>
+                      <li><a href="#"style="font-weight: bold; font-size: large;">Loan requests</a></li>
+                      <li><a href="#"style="font-weight: bold; font-size: large;">Card reports</a></li>
+                      <li><a href="#"style="font-weight: bold; font-size: large;">Card requests</a></li>
+                      <li><a href="#"style="font-weight: bold; font-size: large;">Card transactions</a></li>
+                      <li><a href="#"style="font-weight: bold; font-size: large;">Account requests</a></li>
+                    </ul>
+          
+        </div>
+        
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
         <div class="container">
             <div class="row" style="margin-left: 0%; width: 122%;" >
                 <div class="col-md-10">
@@ -80,6 +87,10 @@
             <span style="color: white;">Requests</span>
             <span class="badge">7</span>
           </a>
+          <a href="#" class="notification" style="margin-left: 11%;">
+            <span style="color: white;">Reports</span>
+            <span class="badge">3</span>
+          </a>
         </div>
         <script>
           function showPopup() {
@@ -92,7 +103,15 @@
     </div>
     </div>
     <!--services section end -->
-   
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "200px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
