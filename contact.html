@@ -32,42 +32,155 @@
 </head>
 <body>
   <!--header section start -->
-    <div class="header_section header_bg">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="team.html">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
+  <div class="header_section">
+    <div class="header_left">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <div class="logo"><a href="index.html"><img src="images/options.png"></a></div> -->
+
+      <style>
+        .sidebar {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          top: 0;
+          left: 0;
+          background-color: #1b5a8d;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          }
+          
+          .sidebar div {
+          padding: 8px 8px 8px 30px;
+          font-size: 16px;
+          display: block;
+          transition: 0.5s;
+          cursor: pointer;
+          color: #000000;
+          }
+          
+          .sidebar .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          }
+          
+          .openbtn {
+          font-size: 12px;
+          cursor: pointer;
+          background-color: #add8e6;
+          }
+          
+          #main {
+          transition: margin-left .5s;
+          }
+          </style>
+          <body>
+          
+          <div id="mySidebar" class="sidebar">
+          <div class="closebtn" onclick="closeNav()">×</div>
+          <div>Your Notifications (+1)</div>
+          <div> </div>
+          <div>Your Bank Accounts</div>
+          <div> </div>
+          <div>Your Credit Cards</div>
+          <div> </div>
+          <div>Your Bills</div>
+          <div> </div>
+          <div>Your Loans</div>
+          <div> </div>
+          <div>Transfers</div>
+          <div> </div>
           </div>
-        </nav>
+          
+          <div class="optionbtn" onclick="openCloseNav()"><img src="images/imthebest-removebg-preview.png"></div>
+          
+          <script>
+          function openCloseNav(){
+            if (document.getElementById("mySidebar").style.width == "250px")  
+          {
+            closeNav()
+          }
+          else
+          {
+            openNav()
+          }
+          }
+          function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.body.style.marginLeft = "250px";
+          }
+          
+          function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.body.style.marginLeft= "0";
+          }
+          </script>
+
+        <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="tech.html">Report a problem</a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+      <!-- <div class="banner_main">
+        <h1 class="banner_taital">Vita <br>Bank</h1>
+        <p class="banner_text">You online gate to access the number 1 bank in the middle east and Egypt </p>
+        <div class="btn_main">
+          <div class="more_bt"><a href="#">Read More </a></div>
+          <div class="contact_bt"><a href="contact.html">Contact Us</a></div>
+        </div>
+      </div> -->
     </div>
-    <!--header section end -->
+    <!-- <div class="header_right">
+      <img src="images/banner-img.png" class="banner_img" >
+    </div> -->
+    <div class="header_right">
+
+      <div class="dropdown">
+        <a class="nav-link">Welcome, Ahmad ˅</a>
+        <div class="dropdown-content">
+        <a href="index.html">Log out</a>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+  
+  <!--header section end -->
     <!-- contact section start -->
     <div class="contact_section layout_padding">
       <div class="container-fluid">
-        <h1 class="what_taital">Contact us</h1>
-        <p class="amet_text">amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+          
+        <!-- <h1 class="what_taital">Contact us</h1>
+        <p class="amet_text">amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p> -->
         <div class="contact_section2">
-          <div class="row">
-            <div class="col-md-6 padding_left_0">
+          
+            <!-- <div class="col-md-6 padding_left_0">
               <div class="mail_section">
                 <input type="" class="mail_text_1" placeholder="Name" name="Name">
                 <input type="" class="mail_text_1" placeholder="Phone Number" name="Phone Number">
@@ -81,58 +194,172 @@
                 <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
               </div>
             </div>
+          </div> -->
+
+          <!--ChatGPT code begins here-->
+          <style>
+            .accounts-section {
+              margin: 0 auto;
+              text-align: center;
+              width: 50%;
+              min-width: 400px;
+              max-width: 800px;
+              display: block;
+            }
+            .accounts-list {
+              background-color: #F2F1EF;
+              overflow-x: auto;
+              overflow-y: scroll;
+              height: 200px;
+              color:#000;
+            }
+            table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+            th {
+              background-color: #97BCC7;
+            }
+            th, td {
+              padding: 8px;
+              border: 1px solid #ddd;
+            }
+          </style>
+          
+          <div class="accounts-section">
+            <h2>My Accounts</h2>
+            <div class="accounts-list">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Account Number</th>
+                    <th>Account Type</th>
+                    <th>Amount</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>123456789</td>
+                    <td>Savings</td>
+                    <td>$1,000.00</td>
+                    <td><a href="accountTransactions.html">View Transactions</a></td>
+                  </tr>
+                  <tr>
+                    <td>987654321</td>
+                    <td>Checking</td>
+                   <td>$500.00</td>
+                    <td><a href="accountTransactions.html">View Transactions</a></td>
+                  </tr>
+                  <!-- Add more rows here for additional accounts -->
+                </tbody>
+              </table>
+            </div>
           </div>
+          <div>
+            
+          </div>
+          <style>
+            .bills-section {
+              margin: 0 auto;
+              text-align: center;
+              width: 50%;
+              min-width: 400px;
+              max-width: 800px;
+              display: block;
+              padding-bottom: 80px;
+              padding-top: 80px;
+            }
+            .bills-list {
+              background-color: #F2F1EF;
+              overflow-x: auto;
+              overflow-y: scroll;
+              height: 200px;
+              color:#000;
+            }
+            table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+            th {
+              background-color: #97BCC7;
+            }
+            th, td {
+              padding: 8px;
+              border: 1px solid #ddd;
+            }
+            .bill-payment {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 16px;
+            }
+            .bill-payment input[type="number"] {
+              width: 30%;
+              padding: 4px;
+              /* border: 1px solid #ddd; */
+              /* border-radius: 4px; */
+              margin-left: 8px;
+            }
+          </style>
+          
+          <div class="bills-section">
+            <h2>My Bills</h2>
+            <div class="bills-list">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Bill Name</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Water Bill</td>
+                    <td>Utility</td>
+                    <td>$50.00</td>
+                    <td>June 1, 2023</td>
+                    <td><a href="payBill.html">Pay Bill</a></td>
+                  </tr>
+                  <tr>
+                    <td>Electricity Bill</td>
+                    <td>Utility</td>
+                    <td>$100.00</td>
+                    <td>June 15, 2023</td>
+                    <td><a href="payBill.html">Pay Bill</a></td>
+                  </tr>
+                  <!-- Add more rows here for additional bills -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--ends here-->
+
         </div>
       </div>
     </div>
     <!-- contact section end -->
     <!--footer section start -->
-    <div class="footer_section layout_padding margin_top_90">
+    <div class="footer_section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-sm-6">
-            <h4 class="about_text">About Financial</h4>
-            <div class="location_text"><img src="images/map-icon.png"><span class="padding_left_15">Locations</span></div>
-            <div class="location_text"><img src="images/call-icon.png"><span class="padding_left_15">+01 9876543210</span></div>
-            <div class="location_text"><img src="images/mail-icon.png"><span class="padding_left_15">demo@gmail.com</span></div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <h4 class="about_text">About Financial</h4>
-            <p class="dolor_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <h4 class="about_text">Instagram</h4>
-            <div class="footer_images">
-              <div class="footer_images_left">
-                <div class="image_12"><img src="images/img-12.png"></div>
-                <div class="image_12"><img src="images/img-12.png"></div>
-                <div class="image_12"><img src="images/img-12.png"></div>
-              </div>
-              <div class="footer_images_right">
-                <div class="image_12"><img src="images/img-12.png"></div>
-                <div class="image_12"><img src="images/img-12.png"></div>
-                <div class="image_12"><img src="images/img-12.png"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-sm-6">
-            <h4 class="about_text">Newsletter</h4>
-            <input type="text" class="mail_text" placeholder="Enter your email" name="Enter your email">
-            <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-            <div class="footer_social_icon">
-              <ul>
-                <li><a href="#"><img src="images/fb-icon1.png"></a></li>
-                 <li><a href="#"><img src="images/twitter-icon1.png"></a></li>
-                <li><a href="#"><img src="images/linkedin-icon1.png"></a></li>
-                <li><a href="#"><img src="images/youtub-icon1.png"></a></li>
-              </ul>
-            </div>
-          </div>
+          <!-- <div id="nav">
+            <div id="nav-inner">
+                <p>Some navigations stuff...</p>
+            </div> -->
+            <a class="botnavbar" href="login.html">Notifications</a>
+            <a class="botnavbar" href="login.html">Credit Cards</a>
+            <a class="botnavbar" href="login.html">Loans</a>
+            <a class="botnavbar1" href="login.html">Transfers</a>
+        </div>
         </div>
         <!-- copyright section start -->
-        <div class="copyright_section">
-          <div class="copyright_text">Copyright 2019 All Right Reserved By <a href="https://html.design">Free html  Templates</a></div>
-        </div>
+        <!-- <div class="copyright_section">
+            <div class="copyright_text">Copyright 2023 All Right Reserved By <a href="https://github.com/software-engineering-2023/Professional-">Team Professional</a></div>
+          </div> -->
         <!-- copyright section end -->
       </div>
     </div>
