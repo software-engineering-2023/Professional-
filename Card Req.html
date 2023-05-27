@@ -33,7 +33,7 @@
 <link rel="stylesheet" type="text/css" href="css/submitButton.css">
 <link rel="stylesheet" type="text/css" href="css/drop down.css">
 <link rel="stylesheet" type="text/css" href="css/noti.css">
-<link rel="stylesheet" type="text/css" href="css/slide.css">
+<link rel="stylesheet" type="text/css" href="css/fs.css">
 
   
 
@@ -43,7 +43,6 @@
 <body style="background-color: rgb(248, 249, 250);">
     <div class="header_section header_bg">
       <div id="mySidenav" class="sidenav">
-        
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <ul>
                       
@@ -75,33 +74,58 @@
     <div class="what_we_do_section layout_padding" style="height: 100%;">
       <div class="container">
     <p class="what_text" style="text-align: left;
-         font-size: 30px;">Send Notification</p>
-         <textarea rows="5" cols="50" style="resize: none; width: 1250px; height: 200px;"></textarea>
-         <div>
-         <button class="send-button " onclick="showPopup()">Send</button>
-        </div>
-        <!-- <div>
-
-          <a href="#" class="notification">
-            <span style="color: white;">Requests</span>
-            <span class="badge">7</span>
-          </a>
-          <a href="Card Reports.html" class="notification" style="margin-left: 11%;">
-            <span style="color: white;">Reports</span>
-            <span class="badge">3</span>
-          </a>
-        </div> -->
-        <script>
-          function showPopup() {
-            alert("Sent successfully");
-           location.reload();
-          }
-        </script>
+         font-size: 30px;">Credit card requests</p>
+         
+        
         
 
     </div>
     </div>
-    <!--services section end -->
+    <div class="what_we_do_section_2">
+      <div class="coloumn" style="margin-left: 10%;">
+        <div id="C1">
+          <div class="col-lg-3 col-sm-6">
+            <div class="box_main" style="width: 370%; height: auto; background-color: rgb(61, 90, 133);">
+              <pre><h3  id="displayText1" class="accounting_text" style="text-align: center; ">Card type : classic          Client ID : T5YA1</h3></pre>
+                <div class="row">
+                  <div class="moremore_bt_1" ><a href="#"onclick="removeComponentC1()">Reject</a></div> 
+                  <div class="moremore_bt_1" ><a href="#"onclick="removeComponentC1()">Accept</a></div>       
+                  <!-- <div class="moremore_bt_1" ><a href="#" onclick="changeTextC1()">Deactivate Card</a></div>     -->
+                </div>
+            </div>
+          </div>
+          <!-- <button onclick="removeComponent()">Remove Component</button> -->
+        </div>
+        
+
+        <div id="C2">
+          <div class="col-lg-3 col-sm-6">
+            <div class="box_main" style="margin-top: 10%; width: 370%; height: auto; background-color: rgb(61, 90, 133);">
+              <pre><h3  id="displayText2" class="accounting_text" style="text-align: center; ">Card type : Gold          Card ID : 2CM1</h3></pre>
+                <div class="row">
+                  <div class="moremore_bt_1" ><a href="#"onclick="removeComponentC2()">Reject</a></div> 
+                  <div class="moremore_bt_1" ><a href="#"onclick="removeComponentC2()">Accept</a></div>
+                  <!-- <div class="moremore_bt_1" ><a href="#" onclick="changeTextC2()">Deactivate Card</a></div>     -->
+                </div>
+            </div>
+          </div>
+          <!-- <button onclick="removeComponent()">Remove Component</button> -->
+        </div>
+      
+      
+        <div id="C3">
+          <div class="col-lg-3 col-sm-6">
+            <div class="box_main" style="margin-top: 10%; margin-bottom: 10%; width: 370%; height: auto; background-color: rgb(61, 90, 133);">
+              <pre><h3  id="displayText3" class="accounting_text" style="text-align: center; ">Card type : Platinum          Card ID : 72D6</h3></pre>
+                <div class="row">
+                  <div class="moremore_bt_1" ><a href="#"onclick="removeComponentC3()">Reject</a></div> 
+                  <div class="moremore_bt_1" ><a href="#"onclick="removeComponentC3()">Accept</a></div>
+                  <!-- <div class="moremore_bt_1" ><a href="#" onclick="changeTextC3()">Deactivate Card</a></div>     -->
+                </div>
+            </div>
+          </div>
+        </div> 
+    <!--services section end-->
     <script>
       function openNav() {
         document.getElementById("mySidenav").style.width = "200px";
@@ -111,6 +135,40 @@
         document.getElementById("mySidenav").style.width = "0";
       }
       </script>
+      <script>
+        function removeComponentC1() {
+          var element = document.getElementById("C1");
+          element.parentNode.removeChild(element);
+          
+        }
+          function changeTextC1() {
+            var textElement = document.getElementById("displayText1");
+            textElement.textContent = "Report type : Damaged          Card Status : Inactive          Card ID : A1";
+          }
+          </script>
+          <script>
+            function removeComponentC2() {
+              var element = document.getElementById("C2");
+              element.parentNode.removeChild(element);
+              
+            }
+              function changeTextC2() {
+                var textElement = document.getElementById("displayText2");
+                textElement.textContent = "Report type : Stolen          Card Status : Inactive          Card ID : B74T";
+              }
+              </script>
+              <script>
+                function removeComponentC3() {
+                  var element = document.getElementById("C3");
+                  element.parentNode.removeChild(element);
+                  
+                }
+                  function changeTextC3() {
+                    var textElement = document.getElementById("displayText3");
+                    textElement.textContent = "Report type : Lost          Card Status : Inactive          Card ID : J890F";
+                  }
+                  </script>
+        
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
