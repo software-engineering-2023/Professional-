@@ -37,7 +37,7 @@ Banker:  -----> Bahy
 	Banker can view bank account requests (with accept/reject)
 	He can also view credit card requests (with accept/reject)
 	He can also view loan requests (with accept/reject)
-	Can view credit card theft/damage/loss requests
+	Can view credit card theft/damage/loss requests   DONE
 	Can view credit card transactions
 	Send bank announcements     DONE
 
