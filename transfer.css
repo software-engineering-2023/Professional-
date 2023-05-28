@@ -1,21 +1,19 @@
-/* Styles for transfer.html */
 body {
-    background-color: #f5f5f5;
-    color: #333;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
   }
   
-  .container {
-    width: 600px;
-    margin: 0 auto;
+  .content {
+    max-width: 500px;
+    margin: 20px auto;
+    background: white;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   h1 {
     text-align: center;
-    color: #333;
   }
   
   form {
@@ -24,16 +22,95 @@ body {
   
   label {
     display: block;
-    margin-bottom: 5px;
+    margin-top: 10px;
   }
   
-  select {
+  select,
+  input[type="text"],
+  input[type="date"] {
     width: 100%;
     padding: 5px;
-    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
   
-  button {
+  button[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .transfer-option {
+    display: none;
+  }
+  
+  .transfer-form {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .transfer-type-select {
+    margin-bottom: 20px;
+  }
+  
+  .transfer-type-select label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .transfer-type-select select {
+    width: 200px;
+  }
+  
+  .transfer-option-buttons {
+    margin-top: 20px;
+  }
+  
+  .transfer-option-buttons button {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .transfer-option-buttons .active {
+    background-color: #4e86e5;
+    color: white;
+  }
+  
+  .currency-options label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .currency-options select {
+    width: 200px;
+  }
+  
+  .currency-options .other-currency-input {
+    display: none;
+    width: 200px;
+  }
+  
+  .currency-options .other-currency-label {
+    display: none;
+  }
+  
+  .transfer-option.active .currency-options .other-currency-input {
+    display: inline-block;
+  }
+  
+  .transfer-option.active .currency-options .other-currency-label {
+    display: inline-block;
+  }
+  /* button {
     display: block;
     width: 100%;
     padding: 10px;
@@ -42,25 +119,37 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-bottom: 10px; /* Add margin-bottom property */
+    cursor: pointer;
+    margin-bottom: 10px;
+  } */
+  
+  /* button:hover {
+    background-color: #ec1947;
+  } */
+  .buttonGroup {
+    display: flex;
   }
   
-  button:hover {
+  .transferButton {
+    /* Add your desired button styles here */
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1; /* Distribute the available space equally among the buttons */
+    margin-right: 10px; /* Add some spacing between the buttons */
+  }
+  
+  .transferButton:last-child {
+    margin-right: 0; /* Remove margin for the last button */
+  }
+  
+  .transferButton:hover {
     background-color: #ec1947;
   }
-  
-  .sender-details, .receiver-details {
-    margin-top: 10px;
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-  }
-  
-  .credit-card {
-    display: flex;
-    align-items: center;
-  }
-  
-  .cardholder-name, .expiry-date, .cvv {
-    margin-top: 10px;
+  button:hover {
+    background-color: #ec1947;
   }
   
