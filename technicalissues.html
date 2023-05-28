@@ -95,7 +95,7 @@
                   <a class="nav-link" href="index.html">Home</a>
                 </li> -->
                 <li class="nav-item">
-                  <a class="nav-link" href="login.html">Logout</a>
+                  <a class="nav-link" href="index.html">Logout</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about.html">Profile</a>
@@ -124,26 +124,31 @@
         <h1>Online Banking - Technical issues</h1>
 
         <table>
-          <caption>Credit Card 1</caption>
+          <caption>
+
+
+
+
+          </caption>
           <thead>
             <tr>
-              <th>Credit Card No</th>
-              <th>Credit Card Holder Name</th>
+              <th>Technical Issue No</th>
+              <th>Client ID</th>
+              <th>Client name</th>
               <th>Issue Date</th>
-              <th>Expiry Date</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>CC123456789</td>
+              <td>49-4236</td>             
               <td>John Doe</td>
-              <td>2020-05-15</td>
-              <td>2025-08-01</td>
+              <td>2023-05-26</td>
               <td>
                 <div class="button-container">
-                  <button onclick="viewTransactions(1)">View Transactions</button>
-                  <button onclick="generateReport(1)">Report</button>
+                  <button onclick="viewTransactions(123456789)">View Client message</button>
+                  <button onclick="generateReport(123456789)">Generate report</button>
                 </div>
               </td>
             </tr>
@@ -151,26 +156,32 @@
         </table>
       
         <table>
-          <caption>Credit Card 2</caption>
+          <caption>
+
+
+
+          </caption>
           <thead>
             <tr>
-              <th>Credit Card No</th>
-              <th>Credit Card Holder Name</th>
+              <th>Technical Issue No</th>
+              <th>Client ID</th>
+              <th>Client name</th>
               <th>Issue Date</th>
-              <th>Expiry Date</th>
+              <!-- <th>Expiry Date</th> -->
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>CC987654321</td>
+              <td>52-6239</td>
               <td>Jane Smith</td>
-              <td>2019-09-10</td>
-              <td>2024-11-01</td>
+              <td>2023-05-27</td>
+              <!-- <td>2024-11-01</td> -->
               <td>
                 <div class="button-container">
-                  <button onclick="viewTransactions(2)">View Transactions</button>
-                  <button onclick="generateReport(2)">Report</button>
+                  <button onclick="viewTechnicalIssueMessag2(987654321)">View Client message</button>
+                  <button onclick="generateReport(987654321)">Generate report</button>
                 </div>
               </td>
             </tr>
@@ -178,26 +189,32 @@
         </table>
       
         <table>
-          <caption>Credit Card 3</caption>
+          <caption>
+
+
+
+          </caption>
           <thead>
             <tr>
-              <th>Credit Card No</th>
-              <th>Credit Card Holder Name</th>
+              <th>Technical Issue No</th>
+              <th>Client ID</th>
+              <th>Client name</th>
               <th>Issue Date</th>
-              <th>Expiry Date</th>
+              <!-- <th>Expiry Date</th> -->
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>CC456789123</td>
+              <td>52-6849</td>
               <td>David Johnson</td>
-              <td>2018-03-20</td>
-              <td>2023-06-01</td>
+              <td>2023-05-27</td>
+              <!-- <td>2023-06-01</td> -->
               <td>
                 <div class="button-container">
-                  <button onclick="viewTransactions(3)">View Transactions</button>
-                  <button onclick="generateReport(3)">Report</button>
+                  <button onclick="viewTechnicalIssueMessag3(3)">View Client message</button>
+                  <button onclick="generateReport(456789123)">Generate report</button>
                 </div>
               </td>
             </tr>
@@ -205,26 +222,32 @@
         </table>
       
         <table>
-          <caption>Credit Card 4</caption>
+          <caption>
+
+
+
+          </caption>
           <thead>
             <tr>
-              <th>Credit Card No</th>
-              <th>Credit Card Holder Name</th>
+              <th>Technical Issue No</th>
+              <th>Client ID</th>
+              <th>Client name</th>
               <th>Issue Date</th>
-              <th>Expiry Date</th>
+              <!-- <th>Expiry Date</th> -->
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>CC654321987</td>
+              <td>52-102239</td>
               <td>Sarah Williams</td>
-              <td>2021-12-05</td>
-              <td>2026-02-01</td>
+              <td>2023-05-28</td>
+              <!-- <td>2026-02-01</td> -->
               <td>
                 <div class="button-container">
-                  <button onclick="viewTransactions(4)">View Transactions</button>
-                  <button onclick="generateReport(4)">Report</button>
+                  <button onclick="viewTechnicalIssueMessag4(4)">View Client message</button>
+                  <button onclick="generateReport(654321987)">Generate report</button>
                 </div>
               </td>
             </tr>
@@ -249,12 +272,32 @@
 <script>
   function viewTransactions(cardNumber) {
     // Redirect to the credit card transaction page for the specified card number
-    window.location.href = 'creditCardTransactions.html?card=' + cardNumber;
+    //window.location.href = 'creditCardTransactions.html?card=' + cardNumber;
+    alert("While I am during my transaction the system crashed")
+  }
+
+
+  function viewTechnicalIssueMessag2(cardNumber) {
+    // Redirect to the credit card transaction page for the specified card number
+    //window.location.href = 'creditCardTransactions.html?card=' + cardNumber;
+    alert("The website is taking forever to respond when i try to view my transfers")
+  }
+
+  function viewTechnicalIssueMessag3(cardNumber) {
+    // Redirect to the credit card transaction page for the specified card number
+    //window.location.href = 'creditCardTransactions.html?card=' + cardNumber;
+    alert("For almost a week now i can not login to the website at peak times (1 pm)")
+  }
+
+  function viewTechnicalIssueMessag4(cardNumber) {
+    // Redirect to the credit card transaction page for the specified card number
+    //window.location.href = 'creditCardTransactions.html?card=' + cardNumber;
+    alert("I cant view my loans system tells me unknow error")
   }
 
   function generateReport(cardNumber) {
     // Generate a report for the specified card number
     // Implement your report generation logic here
-    alert('Report generated for Credit Card ' + cardNumber);
+    alert('Report generated for techinal issue CC' + cardNumber);
   }
 </script>

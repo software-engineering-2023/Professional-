@@ -7,7 +7,7 @@
     <!-- bootstrap css -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <!-- style css -->
-<link rel="stylesheet" href="css/homeadmin.css">
+<link rel="stylesheet" href="css/nour.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <!-- Responsive-->
 <link rel="stylesheet" href="css/responsive.css">
@@ -73,7 +73,7 @@
 
      
 
-        <form action="transfer.php" method="post">
+        <!-- <form > -->
           <label for="from_account">Banker Name:</label>
           <input type="text" id="from_account" name="from_account">
   
@@ -83,7 +83,7 @@
           <input type="password" id="to_account" name="to_account">
          
         <button class="submit" style="margin-left: 25%;" onclick="generateReport()"> Add</button>
-        </form>
+        <!-- </form> -->
 
 
 
@@ -112,6 +112,14 @@
 function generateReport() {
     // Generate a report for the specified card number
     // Implement your report generation logic here
-    alert('Banker added successfully ');
+    if(document.getElementById("from_account").value === "" || document.getElementById("to_account").value === "" ) {
+      alert('please enter all the fields');
+      location.reload();
+    }
+    else{
+      alert('Banker added successfully ');
+      location.reload();
+    }
+    
   }
 </script>

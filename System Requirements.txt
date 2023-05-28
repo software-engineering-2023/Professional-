@@ -48,3 +48,9 @@ Admin:   -----> Nour
 	Send notification if resolved
 
 	And a report technical issue in all pages
+
+
+	V.I
+
+	Account creation page (form)
+	report a technical issue page (form)
