@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" href="css/homeadmin.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- Responsive-->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="images/fevicon.png" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    
+    <title>Technical issues</title>
+</head>
+
+<style>
+
+ 
+
+ body {
+   background-color: #F2F1EF;
+   font-family: Arial, sans-serif;
+   text-align: center;
+ }
+
+ h1 {
+   color: #053D57;
+ }
+
+ h2 {
+   color: #053D57;
+   text-align: left;
+ }
+
+ table {
+   margin: 20px auto;
+   background-color: #006884;
+   color: white;
+   border-collapse: collapse;
+   width: 80%;
+ }
+
+ th, td {
+   padding: 10px;
+   text-align: center;
+ }
+
+ th {
+   background-color: #053D57;
+ }
+
+ .button-container {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+ }
+
+ button {
+   background-color: #053D57;
+   color: white;
+   padding: 8px 15px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 14px;
+ }
+
+ caption {
+   color: #053D57;
+ }
+</style>
+<body>
+    <div class="header_section">
+        <div class="header_left">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Logout</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">Profile</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services</a>
+                </li> -->
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="tech.html">Report a problem</a>
+                </li> -->
+              </ul>
+            </div>
+          </nav>
+
+         
+          
+        </div>
+        
+      </div>
+      
+      <div style="margin-top: 100px;">
+
+        <h1>Online Banking - Technical issues</h1>
+
+        <table>
+          <caption>Credit Card 1</caption>
+          <thead>
+            <tr>
+              <th>Credit Card No</th>
+              <th>Credit Card Holder Name</th>
+              <th>Issue Date</th>
+              <th>Expiry Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CC123456789</td>
+              <td>John Doe</td>
+              <td>2020-05-15</td>
+              <td>2025-08-01</td>
+              <td>
+                <div class="button-container">
+                  <button onclick="viewTransactions(1)">View Transactions</button>
+                  <button onclick="generateReport(1)">Report</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <table>
+          <caption>Credit Card 2</caption>
+          <thead>
+            <tr>
+              <th>Credit Card No</th>
+              <th>Credit Card Holder Name</th>
+              <th>Issue Date</th>
+              <th>Expiry Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CC987654321</td>
+              <td>Jane Smith</td>
+              <td>2019-09-10</td>
+              <td>2024-11-01</td>
+              <td>
+                <div class="button-container">
+                  <button onclick="viewTransactions(2)">View Transactions</button>
+                  <button onclick="generateReport(2)">Report</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <table>
+          <caption>Credit Card 3</caption>
+          <thead>
+            <tr>
+              <th>Credit Card No</th>
+              <th>Credit Card Holder Name</th>
+              <th>Issue Date</th>
+              <th>Expiry Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CC456789123</td>
+              <td>David Johnson</td>
+              <td>2018-03-20</td>
+              <td>2023-06-01</td>
+              <td>
+                <div class="button-container">
+                  <button onclick="viewTransactions(3)">View Transactions</button>
+                  <button onclick="generateReport(3)">Report</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      
+        <table>
+          <caption>Credit Card 4</caption>
+          <thead>
+            <tr>
+              <th>Credit Card No</th>
+              <th>Credit Card Holder Name</th>
+              <th>Issue Date</th>
+              <th>Expiry Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CC654321987</td>
+              <td>Sarah Williams</td>
+              <td>2021-12-05</td>
+              <td>2026-02-01</td>
+              <td>
+                <div class="button-container">
+                  <button onclick="viewTransactions(4)">View Transactions</button>
+                  <button onclick="generateReport(4)">Report</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+   
+    
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+<script>
+  function viewTransactions(cardNumber) {
+    // Redirect to the credit card transaction page for the specified card number
+    window.location.href = 'creditCardTransactions.html?card=' + cardNumber;
+  }
+
+  function generateReport(cardNumber) {
+    // Generate a report for the specified card number
+    // Implement your report generation logic here
+    alert('Report generated for Credit Card ' + cardNumber);
+  }
+</script>
