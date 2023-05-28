@@ -6,10 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const anotherVitaAccountButton = document.getElementById("anotherVitaAccountButton");
   const anotherVitaCardButton = document.getElementById("anotherVitaCardButton");
   const transferOutsideVitaButton = document.getElementById("transferOutsideVitaButton");
+  const showDetailsButton = document.getElementById("showDetailsButton");
   const anotherVitaAccountForm = document.getElementById("anotherVitaAccountForm");
   const anotherVitaCardForm = document.getElementById("anotherVitaCardForm");
   const transferOutsideVitaForm = document.getElementById("transferOutsideVitaForm");
-  const showDetailsButton = document.getElementById("showDetailsButton");
+  const ShowDetailsForm = document.getElementById("ShowDetailsForm");
+  
 
   // Event listener for transfer type selection
   transferTypeSelect.addEventListener("change", function() {
@@ -46,6 +48,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  // Event listener for "Transfer Outside Vita" button
+  showDetailsButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    resetForms();
+    if (transferTypeSelect.value === "international") {
+      ShowDetailsForm.style.display = "block";
+    }
+  });
+
   // Event listener for form submission
   transferForm.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -53,16 +64,17 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   // Event listener for "Show Details" button
-  showDetailsButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    showInternationalTransferFields();
-  });
+  // showDetailsButton.addEventListener("click", function(event) {
+  //   event.preventDefault();
+  //   showInternationalTransferFields();
+  // });
 
   // Function to reset the forms
   function resetForms() {
     anotherVitaAccountForm.style.display = "none";
     anotherVitaCardForm.style.display = "none";
     transferOutsideVitaForm.style.display = "none";
+    ShowDetailsForm.style.display = "none";
   }
 
   // Function to show international transfer fields

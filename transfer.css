@@ -110,22 +110,7 @@ body {
   .transfer-option.active .currency-options .other-currency-label {
     display: inline-block;
   }
-  /* button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    cursor: pointer;
-    margin-bottom: 10px;
-  } */
   
-  /* button:hover {
-    background-color: #ec1947;
-  } */
   .buttonGroup {
     display: flex;
   }
@@ -149,6 +134,7 @@ body {
   .transferButton:hover {
     background-color: #ec1947;
   }
+  
   button:hover {
     background-color: #ec1947;
   }
