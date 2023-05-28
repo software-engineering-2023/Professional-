@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Banking - Credit Card Report</title>
+  <style>
+    body {
+      background-color: #F2F1EF;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #053D57;
+    }
+
+    h2 {
+      color: #053D57;
+      text-align: left;
+    }
+
+    .container {
+      width: 400px;
+      margin: 20px auto;
+      background-color: #006884;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .checkbox-group {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .checkbox-group label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #053D57;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .error-message {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Online Banking - Credit Card Report</h1>
+
+  <div class="container">
+    <h2>Report Form</h2>
+    <form id="reportForm">
+      <label for="creditCardNo">Credit Card No:</label>
+      <input type="text" id="creditCardNo" name="creditCardNo" readonly>
+
+      <label for="cardHolderName">Credit Card Holder Name:</label>
+      <input type="text" id="cardHolderName" name="cardHolderName" readonly>
+
+      <label for="reason">Reason:</label>
+      <div class="checkbox-group">
+        <label><input type="radio" name="reason" value="theft" required>Theft</label>
+        <label><input type="radio" name="reason" value="lost" required>Lost</label>
+        <label><input type="radio" name="reason" value="damage" required>Damage</label>
+        <label><input type="radio" name="reason" value="others" required>Others</label>
+      </div>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4"></textarea>
+
+      <button type="submit">Submit Report</button>
+    </form>
+
+    <div class="error-message" id="errorMessage"></div>
+  </div>
+
+  <script>
+    // Get the credit card number and holder name from the URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const cardNumber = urlParams.get('card');
+    const cardHolderName = urlParams.get('name');
+    document.getElementById('creditCardNo').value = cardNumber;
+    document.getElementById('cardHolderName').value = cardHolderName;
+
+    // Handle form submission
+    document.getElementById('reportForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Check if a reason is selected
+      const reasonElements = document.getElementsByName('reason');
+      let selectedReason = null;
+      for (let i = 0; i < reasonElements.length; i++) {
+        if (reasonElements[i].checked) {
+          selectedReason = reasonElements[i].value;
+          break;
+        }
+      }
+
+      if (!selectedReason) {
+        document.getElementById('errorMessage').textContent = 'Please select a reason.';
+        return;
+      }
+
+      // Get the description
+      const description = document.getElementById('description').value;
+
+      // Submit the report
+      submitReport(cardNumber, cardHolderName, selectedReason, description);
+    });
+
+    // Function to submit the report
+    function submitReport(cardNumber, cardHolderName, reason, description) {
+      // Implement your report submission logic here
+      // You can send the data to a server or perform any required actions
+
+      // Clear form fields
+      document.getElementById('reportForm').reset();
+
+      // Show success message
+      document.getElementById('errorMessage').textContent = 'Report Sent Successfully';
+
+      // Redirect to credit card transactions page
+      setTimeout(function () {
+        window.location.href = 'creditCardTransactions.html?card=' + cardNumber;
+      }, 2500);
+    }
+  </script>
+</body>
+</html>

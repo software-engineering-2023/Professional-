@@ -4,17 +4,17 @@
   <title>Credit Card Application</title>
   <style>
     body {
-      background-color: white;
+      background-color: #F2F1EF;
       font-family: Arial, sans-serif;
       text-align: center;
     }
 
     h1 {
-      color: gold;
+      color: #001f3f;
     }
 
     h2 {
-      color: gold;
+      color: #001f3f;
       text-align: left;
     }
 
@@ -22,6 +22,8 @@
       margin: 0 auto;
       max-width: 500px;
       padding: 20px;
+      background-color: #f8f9fa;
+      color: #001f3f;
     }
 
     input[type="text"],
@@ -36,8 +38,8 @@
     }
 
     input[type="submit"] {
-      background-color: gold;
-      color: white;
+      background-color: #001f3f;
+      color: #fff;
       padding: 10px 20px;
       border: none;
       border-radius: 4px;
@@ -55,7 +57,7 @@
     }
 
     label {
-      color: gold;
+      color: #001f3f;
       display: block;
       text-align: left;
       margin-bottom: 5px;
@@ -68,8 +70,8 @@
     }
 
     .button {
-      background-color: gold;
-      color: white;
+      background-color: #001f3f;
+      color: #fff;
       padding: 10px 20px;
       border: none;
       border-radius: 4px;
@@ -81,12 +83,19 @@
       margin: 0 auto;
       max-width: 500px;
       padding: 20px;
+      background-color: #f8f9fa;
+      color: #001f3f;
     }
 
     .success-message {
-      color: gold;
+      color: #001f3f;
       font-size: 24px;
       margin-bottom: 20px;
+    }
+
+    .error-message {
+      color: red;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -97,137 +106,166 @@
     <!-- Page 1: Personal Information -->
     <div id="page1">
       <h2>Personal Information</h2>
-      <form action="#" method="POST">
-        <label for="firstName">First Name</label>
+      <form action="#" method="POST" onsubmit="return validatePage1()">
+        <label for="firstName">First Name *</label>
         <input type="text" id="firstName" name="firstName" required>
 
         <label for="middleName">Middle Name</label>
         <input type="text" id="middleName" name="middleName">
 
-        <label for="lastName">Last Name</label>
+        <label for="lastName">Last Name *</label>
         <input type="text" id="lastName" name="lastName" required>
 
-        <label for="country">Country</label>
+        <label for="country">Country *</label>
         <input type="text" id="country" name="country" required>
 
-        <label for="city">City/District</label>
+        <label for="city">City/District *</label>
         <input type="text" id="city" name="city" required>
 
-        <label for="phoneNumber">Phone Number</label>
+        <label for="phoneNumber">Phone Number *</label>
         <input type="text" id="phoneNumber" name="phoneNumber" required>
 
-        <label for="dob">Date of Birth</label>
+        <label for="dob">Date of Birth *</label>
         <input type="date" id="dob" name="dob" required>
 
-        <label for="ssn">Social Security Number</label>
+        <label for="ssn">Social Security Number *</label>
         <input type="text" id="ssn" name="ssn" required>
 
         <div class="buttons-container">
-          <button class="button" type="button" disabled>Back</button>
-          <button class="button" type="button" onclick="showPage(2)">Next</button>
+          <button type="submit" class="button">Next</button>
         </div>
+
+        <div id="page1-error" class="error-message"></div>
       </form>
     </div>
 
     <!-- Page 2: Financial Information -->
     <div id="page2" style="display: none;">
       <h2>Financial Information</h2>
-      <form action="#" method="POST">
-        <label for="income">Annual Income</label>
+      <form action="#" method="POST" onsubmit="return validatePage2()">
+        <label for="income">Annual Income *</label>
         <input type="text" id="income" name="income" required>
 
-        <label for="employmentStatus">Employment Status</label>
+        <label for="employmentStatus">Employment Status *</label>
         <select id="employmentStatus" name="employmentStatus" required>
-          <option value="" disabled selected>Select</option>
+          <option value="">Select</option>
           <option value="employed">Employed</option>
-          <option value="self-employed">Self-Employed</option>
+          <option value="self-employed">Self-employed</option>
           <option value="unemployed">Unemployed</option>
         </select>
 
-        <label for="occupation">Occupation</label>
+        <label for="occupation">Occupation *</label>
         <input type="text" id="occupation" name="occupation" required>
 
         <div class="buttons-container">
-          <button class="button" type="button" onclick="showPage(1)">Back</button>
-          <button class="button" type="button" onclick="showPage(3)">Next</button>
+          <button type="button" class="button" onclick="showPage(1)">Previous</button>
+          <button type="submit" class="button">Next</button>
         </div>
+
+        <div id="page2-error" class="error-message"></div>
       </form>
     </div>
 
-    <!-- Page 3: Card Options -->
+    <!-- Page 3: Credit Card Options -->
     <div id="page3" style="display: none;">
-      <h2>Card Options</h2>
-      <form action="#" method="POST">
-        <label for="cardType">Card Type</label>
+      <h2>Credit Card Options</h2>
+      <form action="#" method="POST" onsubmit="return validatePage3()">
+        <label for="cardType">Card Type *</label>
         <select id="cardType" name="cardType" required>
-          <option value="" disabled selected>Select</option>
+          <option value="">Select</option>
           <option value="visa">Visa</option>
           <option value="mastercard">Mastercard</option>
           <option value="amex">American Express</option>
         </select>
 
-        <label for="creditLimit">Credit Card Limit</label>
+        <label for="creditLimit">Credit Limit *</label>
         <input type="text" id="creditLimit" name="creditLimit" required>
 
-        <div class="checkbox-container">
-          <input type="checkbox" id="terms" name="terms" required>
-          <label for="terms">I have read and agree to the terms and conditions of this credit card offer.</label>
-        </div>
-
         <div class="buttons-container">
-          <button class="button" type="button" onclick="showPage(2)">Back</button>
-          <button class="button" type="submit" onclick="submitForm()">Submit Application</button>
+          <button type="button" class="button" onclick="showPage(2)">Previous</button>
+          <button type="submit" class="button">Submit</button>
         </div>
-      </form>
-    </div>
 
-    <!-- Success Page -->
-    <div id="success" style="display: none;" class="success-container">
-      <h2 style="color: gold;">Application Submitted Successfully</h2>
-      <p class="success-message" style="color: gold;">Thank you for submitting your application!</p>
-      <button class="button" onclick="returnToHomePage()">Return to Home Page</button>
+        <div id="page3-error" class="error-message"></div>
+      </form>
     </div>
   </div>
 
   <script>
-    function showPage(pageNumber) {
-      var pages = document.querySelectorAll('.form-container > div');
-      for (var i = 0; i < pages.length; i++) {
-        if (i + 1 === pageNumber) {
-          pages[i].style.display = 'block';
-        } else {
-          pages[i].style.display = 'none';
-        }
+    function validatePage1() {
+      var firstName = document.getElementById('firstName').value.trim();
+      var lastName = document.getElementById('lastName').value.trim();
+      var country = document.getElementById('country').value.trim();
+      var city = document.getElementById('city').value.trim();
+      var phoneNumber = document.getElementById('phoneNumber').value.trim();
+      var dob = document.getElementById('dob').value.trim();
+      var ssn = document.getElementById('ssn').value.trim();
+
+      if (firstName === '' || lastName === '' || country === '' || city === '' || phoneNumber === '' || dob === '' || ssn === '') {
+        document.getElementById('page1-error').textContent = 'Please fill in all required fields.';
+        return false;
       }
 
-      var backButton = document.querySelector('.buttons-container button:first-child');
-      var nextButton = document.querySelector('.buttons-container button:last-child');
+      document.getElementById('page1-error').textContent = '';
+      document.getElementById('page1').style.display = 'none';
+      document.getElementById('page2').style.display = 'block';
+      return false;
+    }
 
-      if (pageNumber === 1) {
-        backButton.disabled = true;
-        nextButton.disabled = false;
-      } else if (pageNumber === pages.length) {
-        backButton.disabled = false;
-        nextButton.disabled = true;
-      } else {
-        backButton.disabled = false;
-        nextButton.disabled = false;
+    function validatePage2() {
+      var income = document.getElementById('income').value.trim();
+      var employmentStatus = document.getElementById('employmentStatus').value.trim();
+      var occupation = document.getElementById('occupation').value.trim();
+
+      if (income === '' || employmentStatus === '' || occupation === '') {
+        document.getElementById('page2-error').textContent = 'Please fill in all required fields.';
+        return false;
+      }
+
+      document.getElementById('page2-error').textContent = '';
+      document.getElementById('page2').style.display = 'none';
+      document.getElementById('page3').style.display = 'block';
+      return false;
+    }
+
+    function validatePage3() {
+      var cardType = document.getElementById('cardType').value.trim();
+      var creditLimit = document.getElementById('creditLimit').value.trim();
+
+      if (cardType === '' || creditLimit === '') {
+        document.getElementById('page3-error').textContent = 'Please fill in all required fields.';
+        return false;
+      }
+
+      document.getElementById('page3-error').textContent = '';
+
+      // Display success message and redirect after 7 seconds
+      var successContainer = document.createElement('div');
+      successContainer.className = 'success-container';
+
+      var successMessage = document.createElement('div');
+      successMessage.className = 'success-message';
+      successMessage.textContent = 'Your credit card application has been submitted successfully.';
+
+      successContainer.appendChild(successMessage);
+      document.body.appendChild(successContainer);
+
+      setTimeout(function() {
+        window.location.href = 'index.html';
+      }, 7000);
+
+      return false;
+    }
+
+    function showPage(page) {
+      if (page === 1) {
+        document.getElementById('page2').style.display = 'none';
+        document.getElementById('page1').style.display = 'block';
+      } else if (page === 2) {
+        document.getElementById('page3').style.display = 'none';
+        document.getElementById('page2').style.display = 'block';
       }
     }
-
-    function submitForm() {
-      // Perform form submission logic here
-
-      // Show success page
-      showPage(4);
-    }
-
-    function returnToHomePage() {
-      // Redirect to the home page (index.html)
-      window.location.href = 'index.html';
-    }
-
-    showPage(1);
   </script>
 </body>
 </html>
