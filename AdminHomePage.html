@@ -21,6 +21,7 @@
   <!-- owl stylesheets -->
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
   <title>Admin homepage</title>
@@ -42,13 +43,24 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">Logout</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="profile.html">Profile</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </nav>
     </div>
+    <button onclick="goBack()" style="margin-left: 250px; width: 45px;"><i class="fas fa-arrow-left"></i></button>
+        <button onclick="goForward()"style="width: 45px;"><i class="fas fa-arrow-right"></i></button>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    
+      function goForward() {
+        window.history.forward();
+      }
+    </script>
   </div>
 
   <div class="content-section">
@@ -70,9 +82,21 @@
             <h5 class="card-title">Technical Issues</h5>
             <p class="card-text">View and resolve technical issues reported by customers.</p>
             <a href="technicalissues.html" class="btn btn-primary">View Technical Issues</a>
+            
           </div>
         </div>
       </div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Send Announcement</h5>
+            <p class="card-text">Send announcements to users..</p>
+            <a href="SendAnnouncement.html" class="btn btn-primary">Send Announcement</a>
+
+
+
+
+
     </div>
   </div>
 

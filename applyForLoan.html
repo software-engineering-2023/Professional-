@@ -29,6 +29,7 @@
 <!-- owl stylesheets --> 
 <link rel="stylesheet" href="css/owl.carousel.min.css">
 <link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 </head>
 <body>
@@ -361,7 +362,17 @@ button {
         </div>
       </nav>
     </div>
-
+    <button onclick="goBack()" style="margin-left: 250px; width: 45px;"><i class="fas fa-arrow-left"></i></button>
+        <button onclick="goForward()"style="width: 45px;"><i class="fas fa-arrow-right"></i></button>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    
+      function goForward() {
+        window.history.forward();
+      }
+    </script>
     <div class="header_right">
 
       <div class="dropdown">
