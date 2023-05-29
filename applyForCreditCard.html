@@ -266,6 +266,13 @@
         document.getElementById('page2').style.display = 'block';
       }
     }
+    
+    // Phone number input restriction
+    var phoneNumberInput = document.getElementById('phoneNumber');
+    phoneNumberInput.addEventListener('input', function(event) {
+      var value = event.target.value;
+      event.target.value = value.replace(/[^0-9+]/g, '');
+    });
   </script>
 </body>
 </html>

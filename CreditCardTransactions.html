@@ -75,10 +75,9 @@
   <!-- Dropdowns -->
   <div class="dropdown-container">
     <select id="cardDropdown" onchange="loadTransactions()">
-      <option value="1">Credit Card 1</option>
-      <option value="2">Credit Card 2</option>
-      <option value="3">Credit Card 3</option>
-      <option value="4">Credit Card 4</option>
+      <option value="CC123456789">Credit Card 1</option>
+      <option value="CC987654321">Credit Card 2</option>
+      <option value="CC456789123">Credit Card 3</option>
     </select>
     <select id="timePeriodDropdown" onchange="loadTransactions()">
       <option value="1w">Last week</option>
@@ -87,6 +86,7 @@
       <option value="1m">Last month</option>
     </select>
   </div>
+  
 
   <!-- Transactions Table -->
   <table id="transactionsTable">
@@ -112,7 +112,9 @@
     function loadTransactions() {
       var cardDropdown = document.getElementById('cardDropdown');
       var timePeriodDropdown = document.getElementById('timePeriodDropdown');
-      var cardNumber = cardDropdown.value;
+      var urlParams = new URLSearchParams(window.location.search);
+  var cardNumber = urlParams.get('card');
+    //  var cardNumber = cardDropdown.value;
       var timePeriod = timePeriodDropdown.value;
       cardDropdown.value = cardNumber;
 
