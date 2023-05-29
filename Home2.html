@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>Home</title>
+<link rel="icon" type="image/x-icon" href="images/logo.png">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content=""> 
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="css/style2.css">
+<!-- Responsive-->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="images/fevicon.png" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+</head>
+<body>
+  <!--header section start -->
+  <div class="header_section">
+    <div class="header_left">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <div class="logo"><a href="index.html"><img src="images/options.png"></a></div> -->
+
+      <style>
+        .sidebar {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          top: 0;
+          left: 0;
+          background-color: #1b5a8d;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          }
+          
+          .sidebar div {
+          padding: 8px 8px 8px 30px;
+          font-size: 16px;
+          display: block;
+          transition: 0.5s;
+          cursor: pointer;
+          color: #000000;
+          text-align: left;
+          }
+          
+          .sidebar .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          }
+          
+          .openbtn {
+          font-size: 12px;
+          cursor: pointer;
+          background-color: #add8e6;
+          }
+          
+          #main {
+          transition: margin-left .5s;
+          }
+          </style>
+          <body>
+          
+          <div id="mySidebar" class="sidebar">
+          <div class="closebtn" onclick="closeNav()">×</div>
+          <div><a href="Home.html">Home</a></div>
+          <div> </div>
+          <div><a href="Notifications.html">Your Notifications (+1)</a></div>
+          <div> </div>
+          <div><a href="Home.html">Your Bank Accounts</a></div>
+          <div> </div>
+          <div><a href="CreditCardsView.html">Your Credit Cards</a></div>
+          <div> </div>
+          <div><a href="Home.html">Your Bills</a></div>
+          <div> </div>
+          <div><a href="viewLoans.html">Your Loans</a></div>
+          <div> </div>
+          <div><a href="transfer.html">Transfers</a></div>
+          <div> </div>
+          <div><a href="applyForCreditCard.html">Apply for a Credit Card</a></div>
+          <div> </div>
+          <div><a href="applyForBankAccount.html">Apply for a Bank Account</a></div>
+          <div> </div>
+          <div><a href="applyForLoan.html">Apply for a Loan</a></div>
+          <div> </div>
+          </div>
+          
+          <div class="optionbtn" onclick="openCloseNav()"><img src="images/imthebest-removebg-preview.png"></div>
+          
+          <script>
+          function openCloseNav(){
+            if (document.getElementById("mySidebar").style.width == "250px")  
+          {
+            closeNav()
+          }
+          else
+          {
+            openNav()
+          }
+          }
+          function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.body.style.marginLeft = "250px";
+          }
+          
+          function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.body.style.marginLeft= "0";
+          }
+          </script>
+
+        <div class="logo"><a href="Home.html"><img src="images/logo.png"></a></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="tech.html">Report a problem</a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+      <!-- <div class="banner_main">
+        <h1 class="banner_taital">Vita <br>Bank</h1>
+        <p class="banner_text">You online gate to access the number 1 bank in the middle east and Egypt </p>
+        <div class="btn_main">
+          <div class="more_bt"><a href="#">Read More </a></div>
+          <div class="contact_bt"><a href="contact.html">Contact Us</a></div>
+        </div>
+      </div> -->
+    </div>
+    <button onclick="goBack()" style="margin-left: 250px; width: 45px;"><i class="fas fa-arrow-left"></i></button>
+        <button onclick="goForward()"style="width: 45px;"><i class="fas fa-arrow-right"></i></button>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    
+      function goForward() {
+        window.history.forward();
+      }
+    </script>
+    <!-- <div class="header_right">
+      <img src="images/banner-img.png" class="banner_img" >
+    </div> -->
+    <div class="header_right">
+
+      <div class="dropdown">
+        <a class="nav-link">Welcome, Ahmad ˅</a>
+        <div class="dropdown-content">
+        <a href="index.html">Log out</a>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+  
+  <!--header section end -->
+    <!-- contact section start -->
+    <div class="contact_section layout_padding">
+      <div class="container-fluid">
+          
+        <!-- <h1 class="what_taital">Contact us</h1>
+        <p class="amet_text">amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p> -->
+        <div class="contact_section2">
+          
+            <!-- <div class="col-md-6 padding_left_0">
+              <div class="mail_section">
+                <input type="" class="mail_text_1" placeholder="Name" name="Name">
+                <input type="" class="mail_text_1" placeholder="Phone Number" name="Phone Number">
+                <input type="" class="mail_text_1" placeholder="Email" name="Email">
+                <textarea class="massage_text" placeholder="Message" rows="5" id="comment" name="Message"></textarea>
+                <div class="send_bt"><a href="#">send</a></div>
+              </div>
+            </div>
+            <div class="col-md-6 padding_0">
+              <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+              </div>
+            </div>
+          </div> -->
+
+          <!--ChatGPT code begins here-->
+          <style>
+            .accounts-section {
+              margin: 0 auto;
+              text-align: center;
+              width: 50%;
+              min-width: 400px;
+              max-width: 800px;
+              display: block;
+            }
+            .accounts-list {
+              background-color: #F2F1EF;
+              overflow-x: auto;
+              overflow-y: scroll;
+              height: 200px;
+              color:#000;
+            }
+            table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+            th {
+              background-color: #97BCC7;
+            }
+            th, td {
+              padding: 8px;
+              border: 1px solid #ddd;
+            }
+          </style>
+          
+          <div class="accounts-section">
+            <h2>My Accounts</h2>
+            <a href="applyForBankAccount.html">You have no bank accounts. Please apply for one here.</a>
+            <div class="accounts-list">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Account Number</th>
+                    <th>Account Type</th>
+                    <th>Amount</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <td>No data to display here</td>
+                    <td>No data to display here</td>
+                    <td>No data to display here</td>
+                    <td>No data to display here</td>
+                   
+                  <!-- Add more rows here for additional accounts -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            
+          </div>
+          <style>
+            .bills-section {
+              margin: 0 auto;
+              text-align: center;
+              width: 50%;
+              min-width: 400px;
+              max-width: 800px;
+              display: block;
+              padding-bottom: 80px;
+              padding-top: 80px;
+            }
+            .bills-list {
+              background-color: #F2F1EF;
+              overflow-x: auto;
+              overflow-y: scroll;
+              height: 200px;
+              color:#000;
+            }
+            table {
+              width: 100%;
+              border-collapse: collapse;
+            }
+            th {
+              background-color: #97BCC7;
+            }
+            th, td {
+              padding: 8px;
+              border: 1px solid #ddd;
+            }
+            .bill-payment {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-top: 16px;
+            }
+            .bill-payment input[type="number"] {
+              width: 30%;
+              padding: 4px;
+              /* border: 1px solid #ddd; */
+              /* border-radius: 4px; */
+              margin-left: 8px;
+            }
+          </style>
+          
+          <div class="bills-section">
+            <h2>My Bills</h2>
+            <div class="bills-list">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Bill Name</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Due Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>No data to display here</td>
+                    <td>No data to display here</td>
+                    <td>No data to display here</td>
+                    <td>No data to display here</td>
+                    <td>No data to display here</td>
+                  </tr>
+                  <!-- <tr>
+                    <td>Electricity Bill</td>
+                    <td>Utility</td>
+                    <td>$100.00</td>
+                    <td>June 15, 2023</td>
+                    <td><a href="PayBills2.html">Pay Bill</a></td>
+                  </tr> -->
+                  <!-- Add more rows here for additional bills -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!--ends here-->
+
+        </div>
+      </div>
+    </div>
+    <!-- contact section end -->
+    <!--footer section start -->
+    <div class="footer_section">
+      <div class="container">
+        <div class="row">
+          <!-- <div id="nav">
+            <div id="nav-inner">
+                <p>Some navigations stuff...</p>
+            </div> -->
+            <a class="botnavbar" href="Notifications.html">Notifications</a>
+            <a class="botnavbar" href="CreditCardsView.html">Credit Cards</a>
+            <a class="botnavbar" href="viewLoans.html">Loans</a>
+            <a class="botnavbar1" href="transfer.html">Transfers</a>
+        </div>
+        </div>
+        <!-- copyright section start -->
+        <!-- <div class="copyright_section">
+            <div class="copyright_text">Copyright 2023 All Right Reserved By <a href="https://github.com/software-engineering-2023/Professional-">Team Professional</a></div>
+          </div> -->
+        <!-- copyright section end -->
+      </div>
+    </div>
+    <!--footer section end -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript --> 
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
+</body>
+</html>

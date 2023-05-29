@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Money Transfer</title>
+  <link rel="stylesheet" href="css/transfer.css">
+</head>
+<body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <button onclick="goBack()" style="margin-left: 250px; width: 45px;"><i class="fas fa-arrow-left"></i></button>
+        <button onclick="goForward()"style="width: 45px;"><i class="fas fa-arrow-right"></i></button>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    
+      function goForward() {
+        window.history.forward();
+      }
+    </script>
+  <div class="content">
+    <h1>Money Transfer</h1>
+    <form id="transferForm">
+      <label for="transferType">Transfer Type:</label>
+      <select id="transferType" name="transferType">
+        <option value="">Choose Transfer Type</option>
+        <option value="domestic">Domestic Transfer</option>
+        <option value="international">International Transfer</option>
+      </select>
+
+      <div class="transfer-option" id="domesticTransferOption">
+        <h2>Domestic Transfer</h2>
+        <div class="buttonGroup">
+            <button id="anotherVitaAccountButton" class="transferButton">Another Vita Account</button>
+            <button id="anotherVitaCardButton" class="transferButton">Another Vita Card</button>
+            <button id="transferOutsideVitaButton" class="transferButton">Transfer Outside Vita</button>
+        </div>
+      </div>
+
+      <div class="transfer-option" id="internationalTransferOption">
+        <h2>International Transfer</h2>
+        <button id="showDetailsButton" class="transferButton">Show Details</button>
+      </div>
+
+      <div id="anotherVitaAccountForm" class="transfer-form">
+        <label for="senderAccount" >Sender's Account:</label>
+        <input type="number" required id="senderAccount" name="senderAccount" min="1" placeholder="Enter Your Account No.">
+
+        <label for="beneficiaryAccountNumber">Beneficiary Account Number/IBAN:</label>
+        <input type="number"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber" min="1" placeholder="Enter Beneficiary Account No./IBAN">
+
+        <label for="beneficiaryName">Beneficiary Name:</label>
+        <input type="text"required id="beneficiaryName" name="beneficiaryName" placeholder="Enter Beneficiary Name">
+
+        <label for="amount">Amount:</label>
+        <input type="number"required id="amount" name="amount" min="1" placeholder="Enter Amount">
+
+        <label for="currency">Currency:</label>
+        <select id="currency"required name="currency">
+          <option value="">Choose Currency Type</option>
+          <option value="USD">USD - United States Dollar</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="GBP">GBP - British Pound Sterling</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="EGP">EGP - Egyptian Pound</option>
+          <!-- Add more currency options as needed -->
+        </select>
+
+        <label for="transactionDate">Transaction Date:</label>
+        <input type="date"required id="transactionDate" required onchange="validateDate()" name="transactionDate">
+      </div>
+
+      <div id="anotherVitaCardForm" class="transfer-form">
+        <label for="senderCard">Sender's Card:</label>
+        <input type="number"required id="senderCard" name="senderCard" min="1" placeholder="Enter Your Card No.">
+
+        <label for="beneficiaryCard">Beneficiary Card:</label>
+        <input type="number"required id="beneficiaryCard" name="beneficiaryCard" min="1" placeholder="Enter Beneficiary Card No.">
+
+        <label for="beneficiaryName">Beneficiary Name:</label>
+        <input type="text"required id="beneficiaryName" name="beneficiaryName" placeholder="Enter Beneficiary Name">
+
+        <label for="amount">Amount:</label>
+        <input type="number"required id="amount" name="amount" min="1" placeholder="Enter Amount">
+
+        <label for="currency">Currency:</label>
+        <select id="currency"required name="currency">
+          <option value="">Choose Currency Type</option>
+          <option value="USD">USD - United States Dollar</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="GBP">GBP - British Pound Sterling</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="EGP">EGP - Egyptian Pound</option>
+          <!-- Add more currency options as needed -->
+        </select>
+
+        <label for="transactionDate">Transaction Date:</label>
+        <input type="date"required id="transactionDate" name="transactionDate">
+      </div>
+
+      <div id="transferOutsideVitaForm" class="transfer-form">
+        <label for="senderAccountOutside">Sender's Account:</label>
+        <input type="number"required id="senderAccountOutside" name="senderAccountOutside" min="1" placeholder="Enter Account No.">
+
+        <label for="beneficiaryAccountNumber">Beneficiary Account Number/IBAN:</label>
+        <input type="number"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber" min="1" placeholder="Enter Beneficiary Account No./IBAN">
+
+        <label for="beneficiaryName">Beneficiary Name:</label>
+        <input type="text"required id="beneficiaryName" name="beneficiaryName" placeholder="Enter Beneficiary Name">
+
+        <label for="bankName">Bank Name:</label>
+        <input type="text"required id="bankName" name="bankName" placeholder="Enter Bank Name">
+
+        <label for="beneficiaryAddress">Beneficiary Address:</label>
+        <input type="text"required id="beneficiaryAddress" name="beneficiaryAddress" placeholder="Enter Beneficiary Address">
+
+        <label for="amount">Amount:</label>
+        <input type="number"required id="amount" name="amount" min="1" placeholder="Enter Amount">
+
+        <label for="currency">Currency:</label>
+        <select id="currency"required name="currency">
+          <option value="">Choose Currency Type</option>
+          <option value="USD">USD - United States Dollar</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="GBP">GBP - British Pound Sterling</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+          <option value="AUD">AUD - Australian Dollar</option>
+          <option value="EGP">EGP - Egyptian Pound</option>
+          <!-- Add more currency options as needed -->
+        </select>
+
+        <label for="transactionDate">Transaction Date:</label>
+        <input type="date"required id="transactionDate" required onchange="validateDate()" name="transactionDate">
+      </div>
+
+      <div id="ShowDetailsForm" class="transfer-form">
+        <label for="senderAccountNumber">Sender's Account Number:</label>
+          <input type="number"required id="senderAccountNumber" name="senderAccountNumber" min="1" placeholder="Enter Account No.">
+
+          <label for="senderName">Sender's Name:</label>
+          <input type="text"required id="senderName" name="senderName" placeholder="Enter Your Name">
+
+          <label for="beneficiaryAccountNumber">Beneficiary Account Number/IBAN:</label>
+          <input type="number"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber" min="1" placeholder="Enter Beneficiary Account No./IBAN">
+
+          <label for="beneficiaryName">Beneficiary Name:</label>
+          <input type="text"required id="beneficiaryName" name="beneficiaryName" placeholder="Enter Beneficiary Name">
+
+          <label for="bankName">Bank Name:</label>
+          <input type="text"required id="bankName" name="bankName" placeholder="Enter Bank Name">
+
+          <label for="branchCountry">Branch Country:</label>
+          <input type="text"required id="branchCountry" name="branchCountry" placeholder="Enter Branch Country">
+
+          <label for="amount">Amount:</label>
+          <input type="number"required id="amount" name="amount" min="1" placeholder="Enter Amount">
+
+          <label for="currency">Currency:</label>
+          <select id="currency"required name="currency">
+            <option value="">Choose Currency Type</option>
+            <option value="USD">USD - United States Dollar</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="GBP">GBP - British Pound Sterling</option>
+            <option value="JPY">JPY - Japanese Yen</option>
+            <option value="AUD">AUD - Australian Dollar</option>
+            <option value="EGP">EGP - Egyptian Pound</option>
+            <!-- Add more currency options as needed -->
+          </select>
+
+          <label for="transactionDate">Transaction Date:</label>
+          <input type="date"required id="transactionDate" required onchange="validateDate()" name="transactionDate">
+      </div>
+
+      <button id="transferButton" type="submit" class="transferButton" onclick="redirectToTransactionStatus()" >Transfer </button>
+    </form>
+  </div>
+  <script src = "js/transfer.js"></script>
+</body>
+</html>

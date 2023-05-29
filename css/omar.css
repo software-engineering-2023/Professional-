@@ -1,0 +1,65 @@
+.header_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%; /* Set the width to 100% */
+    background-color: #f8f8f8; /* Add a background color for clarity */
+  }
+  
+  .logo {
+    flex-grow: 1; /* Allow the logo to expand and occupy remaining space */
+  }
+  
+  .logo img {
+    height: 100px;
+    width: auto; /* Ensure the logo maintains its aspect ratio */
+  }
+  
+  .content-section {
+    padding: 50px;
+  }
+  
+  .content-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .content-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .row {
+    margin-top: 40px;
+  }
+
+
+  /* Add CSS for the navbar-toggler button */
+.navbar-toggler {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  /* Center align the text */
+  .welcome-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Add CSS for the navbar-toggler button */
+.navbar-toggler {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  /* Center align the text */
+  .welcome-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
