@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Transaction Status</title>
+  <script>
+    // Display a random transaction status on page load
+    window.onload = function() {
+      const statusMessageElement = document.getElementById('statusMessage');
+      const randomStatus = Math.random() < 0.5 ? 'success' : 'failed';
+
+      if (randomStatus === 'success') {
+        statusMessageElement.textContent = 'Transaction is Successful';
+        statusMessageElement.style.color = 'green';
+      } else {
+        statusMessageElement.textContent = 'Transaction is Failed';
+        statusMessageElement.style.color = 'red';
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      text-align: center;
+      padding-top: 100px;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="statusMessage"></h1>
+</body>
+</html>
