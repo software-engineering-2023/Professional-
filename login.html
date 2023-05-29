@@ -88,6 +88,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <button onclick="goBack()" style="margin-left: 250px; width: 45px;"><i class="fas fa-arrow-left"></i></button>
+        <button style="width: 45px;"><i class="fas fa-arrow-right"></i></button>
+  
   <title>Credit Card Application</title>
   <style>
     body {
@@ -284,7 +288,15 @@
         <div id="page2-error" class="error-message"></div>
       <!-- </form> -->
     </div>
-
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    
+      function goForward() {
+        window.history.forward();
+      }
+    </script>
 
   <script>
     function Registration(){
