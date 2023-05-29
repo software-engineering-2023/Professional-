@@ -32,16 +32,16 @@
 
       <div id="anotherVitaAccountForm" class="transfer-form">
         <label for="senderAccount" >Sender's Account:</label>
-        <input type="text" required id="senderAccount" name="senderAccount">
+        <input type="number" required id="senderAccount" name="senderAccount" min="1" placeholder="Enter Your Account No.">
 
         <label for="beneficiaryAccountNumber">Beneficiary Account Number/IBAN:</label>
-        <input type="text"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber">
+        <input type="number"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber" min="1" placeholder="Enter Beneficiary Account No./IBAN">
 
         <label for="beneficiaryName">Beneficiary Name:</label>
-        <input type="text"required id="beneficiaryName" name="beneficiaryName">
+        <input type="text"required id="beneficiaryName" name="beneficiaryName" placeholder="Enter Beneficiary Name">
 
         <label for="amount">Amount:</label>
-        <input type="text"required id="amount" name="amount">
+        <input type="number"required id="amount" name="amount" min="1" placeholder="Enter Amount">
 
         <label for="currency">Currency:</label>
         <select id="currency"required name="currency">
@@ -56,21 +56,21 @@
         </select>
 
         <label for="transactionDate">Transaction Date:</label>
-        <input type="date"required id="transactionDate" name="transactionDate">
+        <input type="date"required id="transactionDate" required onchange="validateDate()" name="transactionDate">
       </div>
 
       <div id="anotherVitaCardForm" class="transfer-form">
         <label for="senderCard">Sender's Card:</label>
-        <input type="text"required id="senderCard" name="senderCard">
+        <input type="number"required id="senderCard" name="senderCard" min="1" placeholder="Enter Your Card No.">
 
         <label for="beneficiaryCard">Beneficiary Card:</label>
-        <input type="text"required id="beneficiaryCard" name="beneficiaryCard">
+        <input type="number"required id="beneficiaryCard" name="beneficiaryCard" min="1" placeholder="Enter Beneficiary Card No.">
 
         <label for="beneficiaryName">Beneficiary Name:</label>
-        <input type="text"required id="beneficiaryName" name="beneficiaryName">
+        <input type="text"required id="beneficiaryName" name="beneficiaryName" placeholder="Enter Beneficiary Name">
 
         <label for="amount">Amount:</label>
-        <input type="text"required id="amount" name="amount">
+        <input type="number"required id="amount" name="amount" min="1" placeholder="Enter Amount">
 
         <label for="currency">Currency:</label>
         <select id="currency"required name="currency">
@@ -90,22 +90,22 @@
 
       <div id="transferOutsideVitaForm" class="transfer-form">
         <label for="senderAccountOutside">Sender's Account:</label>
-        <input type="text"required id="senderAccountOutside" name="senderAccountOutside">
+        <input type="number"required id="senderAccountOutside" name="senderAccountOutside" min="1" placeholder="Enter Account No.">
 
         <label for="beneficiaryAccountNumber">Beneficiary Account Number/IBAN:</label>
-        <input type="text"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber">
+        <input type="number"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber" min="1" placeholder="Enter Beneficiary Account No./IBAN">
 
         <label for="beneficiaryName">Beneficiary Name:</label>
-        <input type="text"required id="beneficiaryName" name="beneficiaryName">
+        <input type="text"required id="beneficiaryName" name="beneficiaryName" placeholder="Enter Beneficiary Name">
 
         <label for="bankName">Bank Name:</label>
-        <input type="text"required id="bankName" name="bankName">
+        <input type="text"required id="bankName" name="bankName" placeholder="Enter Bank Name">
 
         <label for="beneficiaryAddress">Beneficiary Address:</label>
-        <input type="text"required id="beneficiaryAddress" name="beneficiaryAddress">
+        <input type="text"required id="beneficiaryAddress" name="beneficiaryAddress" placeholder="Enter Beneficiary Address">
 
         <label for="amount">Amount:</label>
-        <input type="text"required id="amount" name="amount">
+        <input type="number"required id="amount" name="amount" min="1" placeholder="Enter Amount">
 
         <label for="currency">Currency:</label>
         <select id="currency"required name="currency">
@@ -120,30 +120,30 @@
         </select>
 
         <label for="transactionDate">Transaction Date:</label>
-        <input type="date"required id="transactionDate" name="transactionDate">
+        <input type="date"required id="transactionDate" required onchange="validateDate()" name="transactionDate">
       </div>
 
       <div id="ShowDetailsForm" class="transfer-form">
         <label for="senderAccountNumber">Sender's Account Number:</label>
-          <input type="text"required id="senderAccountNumber" name="senderAccountNumber">
+          <input type="number"required id="senderAccountNumber" name="senderAccountNumber" min="1" placeholder="Enter Account No.">
 
           <label for="senderName">Sender's Name:</label>
-          <input type="text"required id="senderName" name="senderName">
+          <input type="text"required id="senderName" name="senderName" placeholder="Enter Your Name">
 
           <label for="beneficiaryAccountNumber">Beneficiary Account Number/IBAN:</label>
-          <input type="text"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber">
+          <input type="number"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber" min="1" placeholder="Enter Beneficiary Account No./IBAN">
 
           <label for="beneficiaryName">Beneficiary Name:</label>
-          <input type="text"required id="beneficiaryName" name="beneficiaryName">
+          <input type="text"required id="beneficiaryName" name="beneficiaryName" placeholder="Enter Beneficiary Name">
 
           <label for="bankName">Bank Name:</label>
-          <input type="text"required id="bankName" name="bankName">
+          <input type="text"required id="bankName" name="bankName" placeholder="Enter Bank Name">
 
           <label for="branchCountry">Branch Country:</label>
-          <input type="text"required id="branchCountry" name="branchCountry">
+          <input type="text"required id="branchCountry" name="branchCountry" placeholder="Enter Branch Country">
 
           <label for="amount">Amount:</label>
-          <input type="text"required id="amount" name="amount">
+          <input type="number"required id="amount" name="amount" min="1" placeholder="Enter Amount">
 
           <label for="currency">Currency:</label>
           <select id="currency"required name="currency">
@@ -158,5 +158,12 @@
           </select>
 
           <label for="transactionDate">Transaction Date:</label>
-          <input type="date"required id="transactionDate" name="transactionDate">
+          <input type="date"required id="transactionDate" required onchange="validateDate()" name="transactionDate">
       </div>
+
+      <button id="transferButton" type="submit" class="transferButton" onclick="redirectToTransactionStatus()" >Transfer </button>
+    </form>
+  </div>
+  <script src = "js/transfer.js"></script>
+</body>
+</html>
