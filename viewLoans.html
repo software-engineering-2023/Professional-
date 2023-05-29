@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>Pay Bill</title>
+<title>Your Loans</title>
 <link rel="icon" type="image/x-icon" href="images/logo.png">
 <meta name="keywords" content="">
 <meta name="description" content="">
@@ -39,6 +39,73 @@
         <!-- <div class="logo"><a href="index.html"><img src="images/options.png"></a></div> -->
 
       <style>
+
+body {
+      background-color: #F2F1EF;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #053D57;
+    }
+
+    h2 {
+      color: #053D57;
+      text-align: left;
+    }
+
+    table {
+      margin: 20px auto;
+      background-color: #006884;
+      color: white;
+      border-collapse: collapse;
+      width: 80%;
+      margin-bottom: 100px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #053D57;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    button {
+      background-color: #053D57;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    caption {
+      color: #053D57;
+    }
+
+    /* New CSS for dropdowns */
+    .dropdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 14px;
+    }
+
         .sidebar {
           height: 100%;
           width: 0;
@@ -85,7 +152,6 @@
     h2 {
       color: #053D57;
       text-align: left;
-      font-size: 20px;
     }
 
     /* .container {
@@ -130,119 +196,14 @@ button {
       font-size: 14px;
     }
 
-    body {
-      background-color: #F2F1EF;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-
-    h1 {
-      color: #001f3f;
-    }
-
-    h2 {
-      color: #001f3f;
-      text-align: left;
-    }
-
-    .form-container {
-      margin: 0 auto;
-      max-width: 500px;
-      padding: 30px;
-      background-color: #f8f9fa;
-      color: #001f3f;
-      margin-top: 220px;
-      margin-bottom: 50px;
-    }
-
-    input[type="text"],
-    input[type="date"],
-    select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      font-size: 16px;
-    }
-
-    input[type="submit"] {
-      background-color: #001f3f;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      font-size: 16px;
-    }
-
-    label {
-      color: #001f3f;
-      display: block;
-      text-align: left;
-      margin-bottom: 5px;
-    }
-
-    .buttons-container {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-    }
-
-    .button {
-      background-color: #001f3f;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    .success-container {
-      margin: 0 auto;
-      max-width: 500px;
-      padding: 20px;
-      background-color: #f8f9fa;
-      color: #001f3f;
-    }
-
-    .success-message {
-      color: #001f3f;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .success-container {
-      margin: 0 auto;
-      max-width: 500px;
-      padding: 20px;
-      background-color: #f8f9fa;
-      color: #001f3f;
-    }
-    .success-message{
-      color:#001f3f;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-
     .error-message {
       color: red;
       font-weight: bold;
       margin-top: 10px;
     }
-    #main {
-         transition: margin-left .5s;
+          
+          #main {
+          transition: margin-left .5s;
           }
           </style>
           <body>
@@ -308,15 +269,8 @@ button {
           
         </div>
       </nav>
-      <!-- <div class="banner_main">
-        <h1 class="banner_taital">Vita <br>Bank</h1>
-        <p class="banner_text">You online gate to access the number 1 bank in the middle east and Egypt </p>
-        <div class="btn_main">
-          <div class="more_bt"><a href="#">Read More </a></div>
-          <div class="contact_bt"><a href="contact.html">Contact Us</a></div>
-        </div>
-      </div> -->
     </div>
+
     <div class="header_right">
 
       <div class="dropdown">
@@ -324,112 +278,63 @@ button {
         <div class="dropdown-content">
         <a href="index.html">Log out</a>
         </div>
+
       </div>
 
     </div>
-    
   </div>
   
   <!--header section end -->
+
   <!--Page body starts here-->
-  <div class="form-container">
-    <h1>Pay Bill</h1>
-    <!-- Page 2: Financial Information -->
-    <div id="page2">
-      <h2>Financial Information</h2>
-      <form action="#" method="POST" onsubmit="return validatePage2()">
-        
-        
-        <label for="employmentStatus">Bill name *</label>
-        <select id="employmentStatus" name="employmentStatus" required>
-          <option value="employed">Water Bill - $50.00</option>
-          <option value="self-employed">Electricity Bill - $100.00</option>
-          <option value="unemployed">Credit Card Bill - $2500.00</option>
-        </select>
-        <br>
-        <br>
-        <br>
-
-       <label for="income">Account to pay from *</label>
-        <select id="income" name="income" required>
-          <option value="">Select</option>
-          <option value="employed">123456789 - Savings</option>
-          <option value="self-employed">987654321 - Checking</option>
-        </select>
-        <br>
-        <br>
-        <br>
-
-        
-
-        <label for="occupation">Amount to be paid (can be partial) *</label>
-        <input type="text" id="occupation" name="occupation" required>
-
-        <div class="buttons-container">
-          <!-- <button type="button" class="button" onclick="showPage(1)">Previous</button> -->
-          <button type="submit" class="button">Pay</button>
+  <div class="what_we_do_section layout_padding">
+    <div class="container">
+      <h1 class="what_taital">Your Loans</h1>
+      <p class="what_text">Found below are all your loans.</p>
+      <div class="what_we_do_section_2">
+        <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <div class="box_main">
+            <!-- <div class="icon_1"><img src="images/icon-1.png"></div> -->
+            <h3 class="accounting_text">Personal Loan A123D73</h3>
+            <p class="lorem_text">Loan Date: 12/05/2022 <br>Next Installment Deadline: 12/06/2023<br>Installment Amount: $500.0</p>
+            <div class="moremore_bt_1"><a href="payLoan.html">Pay Installment</a></div>
+          </div>
         </div>
-
-        <div id="page2-error" class="error-message">Fill in the information above.</div>
-      </form>
+        <div class="col-lg-3 col-sm-6">
+          <div class="box_main">
+            <!-- <div class="icon_1"><img src="images/icon-2.png"></div> -->
+            <h3 class="accounting_text">Personal Loan D981U84</h3>
+            <p class="lorem_text">Loan Date: 04/02/2023 <br>Next Installment Deadline: 04/06/2023<br>Installment Amount: $10000.0</p>
+            <div class="moremore_bt_1"><a href="payLoan.html">Pay Installment</a></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="box_main">
+            <!-- <div class="icon_1"><img src="images/icon-3.png"></div> -->
+            <h3 class="accounting_text">Car Loan Z716O43</h3>
+            <p class="lorem_text">Loan Date: 30/01/2023 <br>Next Installment Deadline: 30/06/2023<br>Installment Amount: $75000.0<br>Car Type: Audi A8 2023</p>
+            <div class="moremore_bt_1"><a href="payLoan.html">Pay Installment</a></div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="box_main">
+            <!-- <div class="icon_1"><img src="images/icon-4.png"></div> -->
+            <h3 class="accounting_text">Personal Loan K625G02</h3>
+            <p class="lorem_text">Loan Date: 31/12/2022 <br>Next Installment Deadline: 31/06/2023<br>Installment Amount: $980.0</p>
+            <div class="moremore_bt_1"><a href="payLoan.html">Pay Installment</a></div>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
-
   </div>
-
-    
-    <script>
-     function validatePage2() {
-      var income = document.getElementById('income').value.trim();
-      var employmentStatus = document.getElementById('employmentStatus').value.trim();
-      var occupation = document.getElementById('occupation').value.trim();
-
-      // if (!occupation.isNumeric) {
-      //   document.getElementById('page2-error').textContent = 'Please enter a proper value in the amount section.';
-      //   return false;
-      // }
-
-      if (income == "" || employmentStatus == "" || occupation == "") {
-        document.getElementById('page2-error').textContent = 'Please fill in all required fields.';
-        return false;
-      }
-
-      // Display success message and redirect after 7 seconds
-      var successContainer = document.createElement('div');
-      successContainer.className = 'success-container';
-
-      var successMessage = document.createElement('div');
-      successMessage.className = 'success-message';
-      successMessage.textContent = 'You have successfully paid this bill. You will be redirected shortly...';
-
-      successContainer.appendChild(successMessage);
-      document.body.appendChild(successContainer);
-
-      setTimeout(function() {
-        window.location.href = 'Home.html';
-      }, 7000);
-
-      return false;
-     }
-
-    </script>
-
-  <!-- <div class="banner_main">
-        <h1 class="banner_taital">Vita <br>Bank</h1>
-        <p class="banner_text">You online gate to access the number 1 bank in the middle east and Egypt </p>
-        <div class="btn_main">
-          <div class="more_bt"><a href="#">Read More </a></div>
-          <div class="contact_bt"><a href="contact.html">Contact Us</a></div>
-        </div>
-      </div> -->
     <!--Page body ends here-->
+
     <!--footer section start -->
     <div class="footer_section">
       <div class="container">
         <div class="row">
-          <!-- <div id="nav">
-            <div id="nav-inner">
-                <p>Some navigations stuff...</p>
-            </div> -->
             <a class="botnavbar" href="Notifications.html">Notifications</a>
             <a class="botnavbar" href="CreditCardsView.html">Credit Cards</a>
             <a class="botnavbar" href="viewLoans.html">Loans</a>
@@ -437,7 +342,7 @@ button {
         </div>
         </div>
       </div>
-    </div>
+
     <!--footer section end -->
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>

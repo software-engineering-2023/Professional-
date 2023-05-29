@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>Pay Bill</title>
+<title>Notifications</title>
 <link rel="icon" type="image/x-icon" href="images/logo.png">
 <meta name="keywords" content="">
 <meta name="description" content="">
@@ -39,6 +39,73 @@
         <!-- <div class="logo"><a href="index.html"><img src="images/options.png"></a></div> -->
 
       <style>
+
+body {
+      background-color: #F2F1EF;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #053D57;
+    }
+
+    h2 {
+      color: #053D57;
+      text-align: left;
+    }
+
+    table {
+      margin: 20px auto;
+      background-color: #006884;
+      color: white;
+      border-collapse: collapse;
+      width: 80%;
+      margin-bottom: 100px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #053D57;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    button {
+      background-color: #053D57;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    caption {
+      color: #053D57;
+    }
+
+    /* New CSS for dropdowns */
+    .dropdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 14px;
+    }
+
         .sidebar {
           height: 100%;
           width: 0;
@@ -85,7 +152,6 @@
     h2 {
       color: #053D57;
       text-align: left;
-      font-size: 20px;
     }
 
     /* .container {
@@ -148,7 +214,7 @@ button {
     .form-container {
       margin: 0 auto;
       max-width: 500px;
-      padding: 30px;
+      padding: 20px;
       background-color: #f8f9fa;
       color: #001f3f;
       margin-top: 220px;
@@ -222,27 +288,19 @@ button {
       margin-bottom: 20px;
     }
 
-    .success-container {
-      margin: 0 auto;
-      max-width: 500px;
-      padding: 20px;
-      background-color: #f8f9fa;
-      color: #001f3f;
+    .error-message {
+      color: red;
+      margin-bottom: 10px;
     }
-    .success-message{
-      color:#001f3f;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
 
     .error-message {
       color: red;
       font-weight: bold;
       margin-top: 10px;
     }
-    #main {
-         transition: margin-left .5s;
+          
+          #main {
+          transition: margin-left .5s;
           }
           </style>
           <body>
@@ -259,15 +317,9 @@ button {
           <div> </div>
           <div><a href="Home.html">Your Bills</a></div>
           <div> </div>
-          <div><a href="viewLoans.html">Your Loans</a></div>
+          <div><a href="index.html">Your Loans</a></div>
           <div> </div>
           <div><a href="transfer.html">Transfers</a></div>
-          <div> </div>
-          <div><a href="applyForCreditCard.html">Apply for a Credit Card</a></div>
-          <div> </div>
-          <div><a href="applyForBankAccount.html">Apply for a Bank Account</a></div>
-          <div> </div>
-          <div><a href="applyForLoan.html">Apply for a Loan</a></div>
           <div> </div>
           </div>
           
@@ -308,15 +360,8 @@ button {
           
         </div>
       </nav>
-      <!-- <div class="banner_main">
-        <h1 class="banner_taital">Vita <br>Bank</h1>
-        <p class="banner_text">You online gate to access the number 1 bank in the middle east and Egypt </p>
-        <div class="btn_main">
-          <div class="more_bt"><a href="#">Read More </a></div>
-          <div class="contact_bt"><a href="contact.html">Contact Us</a></div>
-        </div>
-      </div> -->
     </div>
+
     <div class="header_right">
 
       <div class="dropdown">
@@ -324,74 +369,158 @@ button {
         <div class="dropdown-content">
         <a href="index.html">Log out</a>
         </div>
+
       </div>
 
     </div>
-    
   </div>
-  
   <!--header section end -->
-  <!--Page body starts here-->
+
   <div class="form-container">
-    <h1>Pay Bill</h1>
-    <!-- Page 2: Financial Information -->
-    <div id="page2">
-      <h2>Financial Information</h2>
-      <form action="#" method="POST" onsubmit="return validatePage2()">
-        
-        
-        <label for="employmentStatus">Bill name *</label>
-        <select id="employmentStatus" name="employmentStatus" required>
-          <option value="employed">Water Bill - $50.00</option>
-          <option value="self-employed">Electricity Bill - $100.00</option>
-          <option value="unemployed">Credit Card Bill - $2500.00</option>
-        </select>
-        <br>
-        <br>
-        <br>
+    <h1>Bank Account Application</h1>
 
-       <label for="income">Account to pay from *</label>
-        <select id="income" name="income" required>
-          <option value="">Select</option>
-          <option value="employed">123456789 - Savings</option>
-          <option value="self-employed">987654321 - Checking</option>
-        </select>
-        <br>
-        <br>
-        <br>
+    <!-- Page 1: Personal Information -->
+    <div id="page1">
+      <h2>Personal Information</h2>
+      <form action="#" method="POST" onsubmit="return validatePage1()">
+        <label for="firstName">First Name *</label>
+        <input type="text" id="firstName" name="firstName" required>
 
-        
+        <label for="middleName">Middle Name</label>
+        <input type="text" id="middleName" name="middleName">
 
-        <label for="occupation">Amount to be paid (can be partial) *</label>
-        <input type="text" id="occupation" name="occupation" required>
+        <label for="lastName">Last Name *</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="country">Country *</label>
+        <input type="text" id="country" name="country" required>
+
+        <label for="city">City/District *</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="phoneNumber">Phone Number *</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required>
+
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="ssn">Social Security Number *</label>
+        <input type="text" id="ssn" name="ssn" required>
 
         <div class="buttons-container">
-          <!-- <button type="button" class="button" onclick="showPage(1)">Previous</button> -->
-          <button type="submit" class="button">Pay</button>
+          <button type="submit" class="button">Next</button>
         </div>
 
-        <div id="page2-error" class="error-message">Fill in the information above.</div>
+        <div id="page1-error" class="error-message"></div>
       </form>
     </div>
 
+    <!-- Page 2: Financial Information -->
+    <div id="page2" style="display: none;">
+      <h2>Financial Information</h2>
+      <form action="#" method="POST" onsubmit="return validatePage2()">
+        <label for="income">Annual Income *</label>
+        <input type="text" id="income" name="income" required>
+
+        <label for="employmentStatus">Employment Status *</label>
+        <select id="employmentStatus" name="employmentStatus" required>
+          <option value="">Select</option>
+          <option value="employed">Employed</option>
+          <option value="self-employed">Self-employed</option>
+          <option value="unemployed">Unemployed</option>
+        </select>
+
+        <label for="occupation">Occupation *</label>
+        <input type="text" id="occupation" name="occupation" required>
+
+        <div class="buttons-container">
+          <button type="button" class="button" onclick="showPage(1)">Previous</button>
+          <button type="submit" class="button">Next</button>
+        </div>
+
+        <div id="page2-error" class="error-message"></div>
+      </form>
+    </div>
+
+    <!-- Page 3: Credit Card Options -->
+    <div id="page3" style="display: none;">
+      <h2>Bank Account Options</h2>
+      <form action="#" method="POST" onsubmit="return validatePage3()">
+        <label for="cardType">Account type *</label>
+        <select id="cardType" name="cardType" required>
+          <option value="">Select</option>
+          <option value="visa">Savings</option>
+          <option value="mastercard">Checking</option>
+          <option value="amex">Money Market Account</option>
+        </select>
+
+        <label for="creditLimit">Account Currency *</label>
+        <select id="creditLimit" name="creditLimit" required>
+          <option value="EGP">Egyptian Pounds (EGP)</option>
+          <option value="visa">American Dollar (USD)</option>
+          <option value="mastercard">Euro (EUR)</option>
+        </select>
+
+        <!-- <label for="creditLimit">Credit Limit *</label>
+        <input type="text" id="creditLimit" name="creditLimit" required> -->
+
+        <div class="buttons-container">
+          <button type="button" class="button" onclick="showPage(2)">Previous</button>
+          <button type="submit" class="button">Submit</button>
+        </div>
+
+        <div id="page3-error" class="error-message"></div>
+      </form>
+    </div>
   </div>
 
-    
-    <script>
-     function validatePage2() {
+  <script>
+    function validatePage1() {
+      var firstName = document.getElementById('firstName').value.trim();
+      var lastName = document.getElementById('lastName').value.trim();
+      var country = document.getElementById('country').value.trim();
+      var city = document.getElementById('city').value.trim();
+      var phoneNumber = document.getElementById('phoneNumber').value.trim();
+      var dob = document.getElementById('dob').value.trim();
+      var ssn = document.getElementById('ssn').value.trim();
+
+      if (firstName === '' || lastName === '' || country === '' || city === '' || phoneNumber === '' || dob === '' || ssn === '') {
+        document.getElementById('page1-error').textContent = 'Please fill in all required fields.';
+        return false;
+      }
+
+      document.getElementById('page1-error').textContent = '';
+      document.getElementById('page1').style.display = 'none';
+      document.getElementById('page2').style.display = 'block';
+      return false;
+    }
+
+    function validatePage2() {
       var income = document.getElementById('income').value.trim();
       var employmentStatus = document.getElementById('employmentStatus').value.trim();
       var occupation = document.getElementById('occupation').value.trim();
 
-      // if (!occupation.isNumeric) {
-      //   document.getElementById('page2-error').textContent = 'Please enter a proper value in the amount section.';
-      //   return false;
-      // }
-
-      if (income == "" || employmentStatus == "" || occupation == "") {
+      if (income === '' || employmentStatus === '' || occupation === '') {
         document.getElementById('page2-error').textContent = 'Please fill in all required fields.';
         return false;
       }
+
+      document.getElementById('page2-error').textContent = '';
+      document.getElementById('page2').style.display = 'none';
+      document.getElementById('page3').style.display = 'block';
+      return false;
+    }
+
+    function validatePage3() {
+      var cardType = document.getElementById('cardType').value.trim();
+      var creditLimit = document.getElementById('creditLimit').value.trim();
+
+      if (cardType === '' || creditLimit === '') {
+        document.getElementById('page3-error').textContent = 'Please fill in all required fields.';
+        return false;
+      }
+
+      document.getElementById('page3-error').textContent = '';
 
       // Display success message and redirect after 7 seconds
       var successContainer = document.createElement('div');
@@ -399,7 +528,7 @@ button {
 
       var successMessage = document.createElement('div');
       successMessage.className = 'success-message';
-      successMessage.textContent = 'You have successfully paid this bill. You will be redirected shortly...';
+      successMessage.textContent = 'Your bank account application has been submitted successfully, we will contact you shortly. You will be redirected shortly...';
 
       successContainer.appendChild(successMessage);
       document.body.appendChild(successContainer);
@@ -409,35 +538,31 @@ button {
       }, 7000);
 
       return false;
-     }
+    }
 
-    </script>
-
-  <!-- <div class="banner_main">
-        <h1 class="banner_taital">Vita <br>Bank</h1>
-        <p class="banner_text">You online gate to access the number 1 bank in the middle east and Egypt </p>
-        <div class="btn_main">
-          <div class="more_bt"><a href="#">Read More </a></div>
-          <div class="contact_bt"><a href="contact.html">Contact Us</a></div>
-        </div>
-      </div> -->
-    <!--Page body ends here-->
+    function showPage(page) {
+      if (page === 1) {
+        document.getElementById('page2').style.display = 'none';
+        document.getElementById('page1').style.display = 'block';
+      } else if (page === 2) {
+        document.getElementById('page3').style.display = 'none';
+        document.getElementById('page2').style.display = 'block';
+      }
+    }
+  </script>
+  
     <!--footer section start -->
     <div class="footer_section">
       <div class="container">
         <div class="row">
-          <!-- <div id="nav">
-            <div id="nav-inner">
-                <p>Some navigations stuff...</p>
-            </div> -->
             <a class="botnavbar" href="Notifications.html">Notifications</a>
             <a class="botnavbar" href="CreditCardsView.html">Credit Cards</a>
-            <a class="botnavbar" href="viewLoans.html">Loans</a>
+            <a class="botnavbar" href="Home.html">Loans</a>
             <a class="botnavbar1" href="transfer.html">Transfers</a>
         </div>
         </div>
       </div>
-    </div>
+
     <!--footer section end -->
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>

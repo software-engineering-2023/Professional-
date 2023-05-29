@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <!-- site metas -->
-<title>Pay Bill</title>
+<title>Pay Loan</title>
 <link rel="icon" type="image/x-icon" href="images/logo.png">
 <meta name="keywords" content="">
 <meta name="description" content="">
@@ -333,18 +333,18 @@ button {
   <!--header section end -->
   <!--Page body starts here-->
   <div class="form-container">
-    <h1>Pay Bill</h1>
+    <h1>Pay Loan</h1>
     <!-- Page 2: Financial Information -->
     <div id="page2">
       <h2>Financial Information</h2>
       <form action="#" method="POST" onsubmit="return validatePage2()">
         
         
-        <label for="employmentStatus">Bill name *</label>
+        <label for="employmentStatus">Loan name *</label>
         <select id="employmentStatus" name="employmentStatus" required>
-          <option value="employed">Water Bill - $50.00</option>
-          <option value="self-employed">Electricity Bill - $100.00</option>
-          <option value="unemployed">Credit Card Bill - $2500.00</option>
+          <option value="employed">PERSONAL LOAN - A123D73</option>
+          <option value="self-employed">CAR LOAN - Z716O43</option>
+          <option value="unemployed">PERSONAL LOAN - K625G02</option>
         </select>
         <br>
         <br>
@@ -359,12 +359,6 @@ button {
         <br>
         <br>
         <br>
-
-        
-
-        <label for="occupation">Amount to be paid (can be partial) *</label>
-        <input type="text" id="occupation" name="occupation" required>
-
         <div class="buttons-container">
           <!-- <button type="button" class="button" onclick="showPage(1)">Previous</button> -->
           <button type="submit" class="button">Pay</button>
@@ -381,14 +375,14 @@ button {
      function validatePage2() {
       var income = document.getElementById('income').value.trim();
       var employmentStatus = document.getElementById('employmentStatus').value.trim();
-      var occupation = document.getElementById('occupation').value.trim();
+      //var occupation = document.getElementById('occupation').value.trim();
 
       // if (!occupation.isNumeric) {
       //   document.getElementById('page2-error').textContent = 'Please enter a proper value in the amount section.';
       //   return false;
       // }
 
-      if (income == "" || employmentStatus == "" || occupation == "") {
+      if (income == "" || employmentStatus == "" ) {
         document.getElementById('page2-error').textContent = 'Please fill in all required fields.';
         return false;
       }
@@ -399,7 +393,7 @@ button {
 
       var successMessage = document.createElement('div');
       successMessage.className = 'success-message';
-      successMessage.textContent = 'You have successfully paid this bill. You will be redirected shortly...';
+      successMessage.textContent = 'You have successfully paid this loan installment. You will be redirected shortly...';
 
       successContainer.appendChild(successMessage);
       document.body.appendChild(successContainer);
