@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>Credit Card Report</title>
+<link rel="icon" type="image/x-icon" href="images/logo.png">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content=""> 
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="css/style2.css">
+<!-- Responsive-->
+<link rel="stylesheet" href="css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="images/fevicon.png" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+</head>
+<body>
+  <!--header section start -->
+  <div class="header_section">
+    <div class="header_left">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <div class="logo"><a href="index.html"><img src="images/options.png"></a></div> -->
+
+      <style>
+
+body {
+      background-color: #F2F1EF;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #053D57;
+      margin-top: 50px;
+    }
+
+    h2 {
+      color: #053D57;
+      text-align: left;
+    }
+
+    table {
+      margin: 20px auto;
+      background-color: #006884;
+      color: white;
+      border-collapse: collapse;
+      width: 80%;
+      margin-bottom: 100px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #053D57;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    button {
+      background-color: #053D57;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    caption {
+      color: #053D57;
+    }
+
+    /* New CSS for dropdowns */
+    .dropdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 14px;
+    }
+
+        .sidebar {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          top: 0;
+          left: 0;
+          background-color: #1b5a8d;
+          overflow-x: hidden;
+          transition: 0.5s;
+          padding-top: 60px;
+          }
+          
+          .sidebar div {
+          padding: 8px 8px 8px 30px;
+          font-size: 16px;
+          display: block;
+          transition: 0.5s;
+          cursor: pointer;
+          color: #000000;
+          text-align: left;
+          }
+          
+          .sidebar .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          }
+          
+          .openbtn {
+          font-size: 12px;
+          cursor: pointer;
+          background-color: #add8e6;
+          }
+
+          .body {background-color: #f7f6f3;
+     font-family: Arial, sans-serif;
+     text-align: center;
+          }
+    h1 {
+      color: #053D57;
+      margin-top: 50px;
+    }
+
+    h2 {
+      color: #053D57;
+      text-align: left;
+    }
+
+    /* .container {
+      width: 400px;
+      margin: 20px auto;
+      background-color: #006884;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    } */
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .checkbox-group {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .checkbox-group label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+button {
+      background-color: #053D57;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    body {
+      background-color: #F2F1EF;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #053D57;
+      margin-top: 50px;
+    }
+
+    h2 {
+      color: #053D57;
+      text-align: left;
+    }
+
+    .container2 {
+      width: 400px;
+      margin: 20px auto;
+      background-color: #f8f9fa;
+      color: #001f3f;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 70px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .checkbox-group {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    .checkbox-group label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #053D57;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .error-message {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .error-message {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+          
+          #main {
+          transition: margin-left .5s;
+          }
+          </style>
+          <body>
+          
+          <div id="mySidebar" class="sidebar">
+          <div class="closebtn" onclick="closeNav()">×</div>
+          <div><a href="Home.html">Home</a></div>
+          <div> </div>
+          <div><a href="Notifications.html">Your Notifications (+1)</a></div>
+          <div> </div>
+          <div><a href="Home.html">Your Bank Accounts</a></div>
+          <div> </div>
+          <div><a href="CreditCardsView.html">Your Credit Cards</a></div>
+          <div> </div>
+          <div><a href="Home.html">Your Bills</a></div>
+          <div> </div>
+          <div><a href="index.html">Your Loans</a></div>
+          <div> </div>
+          <div><a href="transfer.html">Transfers</a></div>
+          <div> </div>
+          </div>
+          
+          <div class="optionbtn" onclick="openCloseNav()"><img src="images/imthebest-removebg-preview.png"></div>
+          
+          <script>
+          function openCloseNav(){
+            if (document.getElementById("mySidebar").style.width == "250px")  
+          {
+            closeNav()
+          }
+          else
+          {
+            openNav()
+          }
+          }
+          function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.body.style.marginLeft = "250px";
+          }
+          
+          function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.body.style.marginLeft= "0";
+          }
+          </script>
+
+        <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="tech.html">Report a problem</a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+    </div>
+
+    <div class="header_right">
+
+      <div class="dropdown">
+        <a class="nav-link">Welcome, Ahmad ˅</a>
+        <div class="dropdown-content">
+        <a href="index.html">Log out</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!--header section end -->
+
+  
+  <h1>Online Banking - Credit Card Report</h1>
+
+  <div class="container2">
+    <h2>Report Form</h2>
+    <form id="reportForm">
+      <label for="creditCardNo">Credit Card No:</label>
+      <input type="text" id="creditCardNo" name="creditCardNo" readonly>
+
+      <label for="cardHolderName">Credit Card Holder Name:</label>
+      <input type="text" id="cardHolderName" name="cardHolderName" readonly>
+
+      <label for="reason">Reason:</label>
+      <div class="checkbox-group">
+        <label><input type="radio" name="reason" value="theft" required>Theft</label>
+        <label><input type="radio" name="reason" value="lost" required>Lost</label>
+        <label><input type="radio" name="reason" value="damage" required>Damage</label>
+        <label><input type="radio" name="reason" value="others" required>Others</label>
+      </div>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4"></textarea>
+
+      <button type="submit">Submit Report</button>
+    </form>
+
+    <div class="error-message" id="errorMessage"></div>
+  </div>
+
+  <script>
+    // Get the credit card number and holder name from the URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const cardNumber = urlParams.get('card');
+    const cardHolderName = urlParams.get('name');
+    document.getElementById('creditCardNo').value = cardNumber;
+    document.getElementById('cardHolderName').value = cardHolderName;
+
+    // Handle form submission
+    document.getElementById('reportForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Check if a reason is selected
+      const reasonElements = document.getElementsByName('reason');
+      let selectedReason = null;
+      for (let i = 0; i < reasonElements.length; i++) {
+        if (reasonElements[i].checked) {
+          selectedReason = reasonElements[i].value;
+          break;
+        }
+      }
+
+      if (!selectedReason) {
+        document.getElementById('errorMessage').textContent = 'Please select a reason.';
+        return;
+      }
+
+      // Get the description
+      const description = document.getElementById('description').value;
+
+      // Submit the report
+      submitReport(cardNumber, cardHolderName, selectedReason, description);
+    });
+
+    // Function to submit the report
+    function submitReport(cardNumber, cardHolderName, reason, description) {
+      // Implement your report submission logic here
+      // You can send the data to a server or perform any required actions
+
+      // Clear form fields
+      document.getElementById('reportForm').reset();
+
+      // Show success message
+      document.getElementById('errorMessage').textContent = 'Report Sent Successfully';
+
+      // Redirect to credit card transactions page
+      setTimeout(function () {
+        window.location.href = 'creditCardsView.html?card=' + cardNumber;
+      }, 2500);
+    }
+  </script>
+  
+    <!--footer section start -->
+    <div class="footer_section">
+      <div class="container">
+        <div class="row">
+            <a class="botnavbar" href="Notifications.html">Notifications</a>
+            <a class="botnavbar" href="CreditCardsView.html">Credit Cards</a>
+            <a class="botnavbar" href="Home.html">Loans</a>
+            <a class="botnavbar1" href="transfer.html">Transfers</a>
+        </div>
+        </div>
+      </div>
+
+    <!--footer section end -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript --> 
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
+</body>
+</html>
