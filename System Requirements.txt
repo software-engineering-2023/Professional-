@@ -35,11 +35,11 @@ Client:
 
 Banker:  -----> Bahy
 	Banker can view bank account requests (with accept/reject)
-	He can also view credit card requests (with accept/reject)
+	He can also view credit card requests (with accept/reject)   DONE
 	He can also view loan requests (with accept/reject)
-	Can view credit card theft/damage/loss requests
+	Can view credit card theft/damage/loss requests   DONE
 	Can view credit card transactions
-	Send bank announcements
+	Send bank announcements     DONE
 
 
 Admin:   -----> Nour
@@ -48,3 +48,9 @@ Admin:   -----> Nour
 	Send notification if resolved
 
 	And a report technical issue in all pages
+
+
+	V.I
+
+	Account creation page (form)
+	report a technical issue page (form)

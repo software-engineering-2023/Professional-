@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Banking - Credit Cards</title>
+  <style>
+    body {
+      background-color: #F2F1EF;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #053D57;
+    }
+
+    h2 {
+      color: #053D57;
+      text-align: left;
+    }
+
+    table {
+      margin: 20px auto;
+      background-color: #006884;
+      color: white;
+      border-collapse: collapse;
+      width: 80%;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #053D57;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    button {
+      background-color: #053D57;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    caption {
+      color: #053D57;
+    }
+
+    #message {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #053D57;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Online Banking - Credit Cards</h1>
+
+  <table>
+    <caption>Credit Card 1</caption>
+    <thead>
+      <tr>
+        <th>Credit Card No</th>
+        <th>Holder Name</th>
+        <th>Issue Date</th>
+        <th>Expiry Date</th>
+        <th>Points</th>
+        <th>Balance</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-card="CC123456789">
+        <td>CC123456789</td>
+        <td>John Doe</td>
+        <td>2020-05-15</td>
+        <td>2025-08-01</td>
+        <td class="points">100</td>
+        <td class="balance">0</td>
+        <td>
+          <div class="button-container">
+            <button onclick="viewTransactions('CC123456789', 'John Doe')">View Transactions</button>
+            <button onclick="redirectToReportPage('CC123456789', 'John Doe')">Report</button>
+            <button onclick="redeemPoints('CC123456789', 'John Doe')">Redeem Points</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Credit Card 2</caption>
+    <thead>
+      <tr>
+        <th>Credit Card No</th>
+        <th>Holder Name</th>
+        <th>Issue Date</th>
+        <th>Expiry Date</th>
+        <th>Points</th>
+        <th>Balance</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-card="CC987654321">
+        <td>CC987654321</td>
+        <td>Jane Smith</td>
+        <td>2019-09-10</td>
+        <td>2024-11-01</td>
+        <td class="points">50</td>
+        <td class="balance">0</td>
+        <td>
+          <div class="button-container">
+            <button onclick="viewTransactions('CC987654321', 'Jane Smith')">View Transactions</button>
+            <button onclick="redirectToReportPage('CC987654321', 'Jane Smith')">Report</button>
+            <button onclick="redeemPoints('CC987654321', 'Jane Smith')">Redeem Points</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>Credit Card 3</caption>
+    <thead>
+      <tr>
+        <th>Credit Card No</th>
+        <th>Holder Name</th>
+        <th>Issue Date</th>
+        <th>Expiry Date</th>
+        <th>Points</th>
+        <th>Balance</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-card="CC456789123">
+        <td>CC456789123</td>
+        <td>David Johnson</td>
+        <td>2018-03-20</td>
+        <td>2023-06-01</td>
+        <td class="points">0</td>
+        <td class="balance">0</td>
+        <td>
+          <div class="button-container">
+            <button onclick="viewTransactions('CC456789123', 'David Johnson')">View Transactions</button>
+            <button onclick="redirectToReportPage('CC456789123', 'David Johnson')">Report</button>
+            <button onclick="redeemPoints('CC456789123', 'David Johnson')">Redeem Points</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="message"></div>
+
+  <script>
+    function viewTransactions(cardNumber, cardHolderName) {
+      // Redirect to the credit card transaction page for the specified card number
+      window.location.href = 'creditCardTransactions.html?card=' + cardNumber;
+    }
+
+    function redirectToReportPage(cardNumber, cardHolderName) {
+      // Redirect to the report page for the specified card number and holder name
+      window.location.href = 'CreditCardReport.html?card=' + cardNumber + '&name=' + encodeURIComponent(cardHolderName);
+    }
+
+    function redeemPoints(cardNumber, cardHolderName) {
+      var pointsElement = document.querySelector(`tr[data-card="${cardNumber}"] .points`);
+      var balanceElement = document.querySelector(`tr[data-card="${cardNumber}"] .balance`);
+      var messageElement = document.getElementById('message');
+
+      var points = parseFloat(pointsElement.textContent);
+      if (points > 0) {
+        var balance = parseFloat(balanceElement.textContent);
+        balance += points;
+        balanceElement.textContent = balance.toFixed(2);
+        pointsElement.textContent = '0';
+        showMessage('Points redeemed successfully! Your balance has been increased.');
+      } else {
+        showMessage('There are no points for this credit card.');
+      }
+    }
+
+    function showMessage(message) {
+      var messageElement = document.getElementById('message');
+      messageElement.textContent = message;
+      messageElement.style.display = 'block';
+      setTimeout(function() {
+        messageElement.style.display = 'none';
+      }, 7000);
+    }
+  </script>
+</body>
+</html>

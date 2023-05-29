@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Banking - Credit Card Transactions</title>
+  <style>
+    body {
+      background-color: #F2F1EF;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #053D57;
+    }
+
+    h2 {
+      color: #053D57;
+      text-align: left;
+    }
+
+    table {
+      margin: 20px auto;
+      background-color: #006884;
+      color: white;
+      border-collapse: collapse;
+      width: 80%;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #053D57;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    button {
+      background-color: #053D57;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    caption {
+      color: #053D57;
+    }
+
+    /* New CSS for dropdowns */
+    .dropdown-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Online Banking - Credit Card Transactions</h1>
+
+  <!-- Dropdowns -->
+  <div class="dropdown-container">
+    <select id="cardDropdown" onchange="loadTransactions()">
+      <option value="1">Credit Card 1</option>
+      <option value="2">Credit Card 2</option>
+      <option value="3">Credit Card 3</option>
+      <option value="4">Credit Card 4</option>
+    </select>
+    <select id="timePeriodDropdown" onchange="loadTransactions()">
+      <option value="1w">Last week</option>
+      <option value="2w">Last 2 weeks</option>
+      <option value="3w">Last 3 weeks</option>
+      <option value="1m">Last month</option>
+    </select>
+  </div>
+
+  <!-- Transactions Table -->
+  <table id="transactionsTable">
+    <caption>Credit Card Transactions</caption>
+    <thead>
+      <tr>
+        <th>Transaction No</th>
+        <th>Transaction Date/Time</th>
+        <th>Transaction Type</th>
+        <th>Other Account Number</th>
+        <th>Amount</th>
+        <th>Transaction ID</th> <!-- New column for transactionId -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Transactions will be dynamically populated here -->
+    </tbody>
+  </table>
+
+  <script>
+    var initialData = [];
+
+    function loadTransactions() {
+      var cardDropdown = document.getElementById('cardDropdown');
+      var timePeriodDropdown = document.getElementById('timePeriodDropdown');
+      var cardNumber = cardDropdown.value;
+      var timePeriod = timePeriodDropdown.value;
+      cardDropdown.value = cardNumber;
+
+      // Clear the existing table rows
+      var tableBody = document.getElementById('transactionsTable').getElementsByTagName('tbody')[0];
+      tableBody.innerHTML = '';
+
+      // Generate dummy data for the table
+      var transactionsData = generateDummyTransactions(cardNumber, timePeriod);
+
+      // Populate the table with dummy data
+      for (var i = 0; i < transactionsData.length; i++) {
+        var row = tableBody.insertRow();
+        var transactionNoCell = row.insertCell(0);
+        var transactionDateTimeCell = row.insertCell(1);
+        var transactionTypeCell = row.insertCell(2);
+        var otherAccountNumberCell = row.insertCell(3);
+        var amountCell = row.insertCell(4);
+        var transactionIdCell = row.insertCell(5); // Add the new cell for transactionId
+
+        transactionNoCell.innerHTML = transactionsData[i].transactionNo;
+        transactionDateTimeCell.innerHTML = transactionsData[i].transactionDateTime;
+        transactionTypeCell.innerHTML = transactionsData[i].transactionType;
+        otherAccountNumberCell.innerHTML = transactionsData[i].otherAccountNumber;
+        amountCell.innerHTML = transactionsData[i].amount;
+
+        // Set the transactionId value in the new cell
+        transactionIdCell.innerHTML = transactionsData[i].transactionId;
+      }
+    }
+
+    function generateDummyTransactions(cardNumber, timePeriod) {
+      var transactionsData = [];
+      var currentDate = new Date();
+      var currentTimestamp = currentDate.getTime();
+
+      var weekMillis = 7 * 24 * 60 * 60 * 1000; // Milliseconds in a week
+      var twoWeeksMillis = 2 * weekMillis;
+      var threeWeeksMillis = 3 * weekMillis;
+      var monthMillis = 4 * weekMillis;
+
+      var transactionCount = 5; // Number of transactions to generate
+      var additionalTransactionCount = 0;
+
+      if (timePeriod === '1w') {
+        var transactionStartDate = currentTimestamp - weekMillis;
+        var transactionEndDate = currentTimestamp;
+        transactionsData = generateTransactions(transactionCount, transactionStartDate, transactionEndDate);
+      } else if (timePeriod === '2w') {
+        additionalTransactionCount = transactionCount;
+        var transactionStartDate = currentTimestamp - twoWeeksMillis;
+        var transactionEndDate = currentTimestamp;
+        transactionsData = generateTransactions(transactionCount + additionalTransactionCount, transactionStartDate, transactionEndDate);
+      } else if (timePeriod === '3w') {
+        additionalTransactionCount = transactionCount * 2;
+        var transactionStartDate = currentTimestamp - threeWeeksMillis;
+        var transactionEndDate = currentTimestamp;
+        transactionsData = generateTransactions(transactionCount + additionalTransactionCount, transactionStartDate, transactionEndDate);
+      } else if (timePeriod === '1m') {
+        additionalTransactionCount = transactionCount * 3;
+        var transactionStartDate = currentTimestamp - monthMillis;
+        var transactionEndDate = currentTimestamp;
+        transactionsData = generateTransactions(transactionCount + additionalTransactionCount, transactionStartDate, transactionEndDate);
+      }
+
+      return transactionsData;
+    }
+
+    function generateTransactions(transactionCount, startDate, endDate) {
+      var transactionsData = [];
+      var timestamps = [];
+
+      // Generate random timestamps
+      for (var i = 0; i < transactionCount; i++) {
+        var timestamp = Math.floor(Math.random() * (endDate - startDate)) + startDate;
+        timestamps.push(timestamp);
+      }
+
+      // Sort the timestamps in descending order
+      timestamps.sort(function(a, b) {
+        return b - a;
+      });
+
+      // Generate transactions based on sorted timestamps
+      for (var i = 0; i < transactionCount; i++) {
+        var transactionNo = i + 1;
+        var transactionDateTime = new Date(timestamps[i]).toLocaleString();
+        var transactionType = getRandomTransactionType();
+        var otherAccountNumber = getRandomAccountNumber();
+        var amount = getRandomAmount();
+        var transactionId = generateTransactionId(); // Generate the transactionId
+
+        var transaction = {
+          transactionNo: transactionNo,
+          transactionDateTime: transactionDateTime,
+          transactionType: transactionType,
+          otherAccountNumber: otherAccountNumber,
+          amount: amount,
+          transactionId: transactionId // Include the transactionId in the transaction object
+        };
+
+        transactionsData.push(transaction);
+      }
+
+      return transactionsData;
+    }
+
+    function getRandomTransactionType() {
+      var transactionTypes = ['Purchase', 'Payment', 'Transfer'];
+      var randomIndex = Math.floor(Math.random() * transactionTypes.length);
+      return transactionTypes[randomIndex];
+    }
+
+    function getRandomAccountNumber() {
+      var accountNumbers = ['1234', '5678', '9012', '3456'];
+      var randomIndex = Math.floor(Math.random() * accountNumbers.length);
+      return accountNumbers[randomIndex];
+    }
+
+    function getRandomAmount() {
+      var minAmount = 10;
+      var maxAmount = 1000;
+      return (Math.random() * (maxAmount - minAmount) + minAmount).toFixed(2);
+    }
+
+    function generateTransactionId() {
+      var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var transactionIdLength = 10;
+      var transactionId = '';
+
+      for (var i = 0; i < transactionIdLength; i++) {
+        var randomIndex = Math.floor(Math.random() * characters.length);
+        transactionId += characters.charAt(randomIndex);
+      }
+
+      return transactionId;
+    }
+
+    // Load initial transactions on page load
+    window.onload = function() {
+      loadTransactions();
+    };
+  </script>
+</body>
+</html>

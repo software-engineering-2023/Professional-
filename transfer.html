@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Money Transfer</title>
-  <link rel="stylesheet" href="transfer.css">
+  <link rel="stylesheet" href="css/transfer.css">
 </head>
 <body>
   <div class="content">
@@ -31,20 +31,20 @@
       </div>
 
       <div id="anotherVitaAccountForm" class="transfer-form">
-        <label for="senderAccount">Sender's Account:</label>
-        <input type="text" id="senderAccount" name="senderAccount">
+        <label for="senderAccount" >Sender's Account:</label>
+        <input type="text" required id="senderAccount" name="senderAccount">
 
         <label for="beneficiaryAccountNumber">Beneficiary Account Number/IBAN:</label>
-        <input type="text" id="beneficiaryAccountNumber" name="beneficiaryAccountNumber">
+        <input type="text"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber">
 
         <label for="beneficiaryName">Beneficiary Name:</label>
-        <input type="text" id="beneficiaryName" name="beneficiaryName">
+        <input type="text"required id="beneficiaryName" name="beneficiaryName">
 
         <label for="amount">Amount:</label>
-        <input type="text" id="amount" name="amount">
+        <input type="text"required id="amount" name="amount">
 
         <label for="currency">Currency:</label>
-        <select id="currency" name="currency">
+        <select id="currency"required name="currency">
           <option value="">Choose Currency Type</option>
           <option value="USD">USD - United States Dollar</option>
           <option value="EUR">EUR - Euro</option>
@@ -56,24 +56,24 @@
         </select>
 
         <label for="transactionDate">Transaction Date:</label>
-        <input type="date" id="transactionDate" name="transactionDate">
+        <input type="date"required id="transactionDate" name="transactionDate">
       </div>
 
       <div id="anotherVitaCardForm" class="transfer-form">
         <label for="senderCard">Sender's Card:</label>
-        <input type="text" id="senderCard" name="senderCard">
+        <input type="text"required id="senderCard" name="senderCard">
 
         <label for="beneficiaryCard">Beneficiary Card:</label>
-        <input type="text" id="beneficiaryCard" name="beneficiaryCard">
+        <input type="text"required id="beneficiaryCard" name="beneficiaryCard">
 
         <label for="beneficiaryName">Beneficiary Name:</label>
-        <input type="text" id="beneficiaryName" name="beneficiaryName">
+        <input type="text"required id="beneficiaryName" name="beneficiaryName">
 
         <label for="amount">Amount:</label>
-        <input type="text" id="amount" name="amount">
+        <input type="text"required id="amount" name="amount">
 
         <label for="currency">Currency:</label>
-        <select id="currency" name="currency">
+        <select id="currency"required name="currency">
           <option value="">Choose Currency Type</option>
           <option value="USD">USD - United States Dollar</option>
           <option value="EUR">EUR - Euro</option>
@@ -85,30 +85,30 @@
         </select>
 
         <label for="transactionDate">Transaction Date:</label>
-        <input type="date" id="transactionDate" name="transactionDate">
+        <input type="date"required id="transactionDate" name="transactionDate">
       </div>
 
       <div id="transferOutsideVitaForm" class="transfer-form">
         <label for="senderAccountOutside">Sender's Account:</label>
-        <input type="text" id="senderAccountOutside" name="senderAccountOutside">
+        <input type="text"required id="senderAccountOutside" name="senderAccountOutside">
 
         <label for="beneficiaryAccountNumber">Beneficiary Account Number/IBAN:</label>
-        <input type="text" id="beneficiaryAccountNumber" name="beneficiaryAccountNumber">
+        <input type="text"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber">
 
         <label for="beneficiaryName">Beneficiary Name:</label>
-        <input type="text" id="beneficiaryName" name="beneficiaryName">
+        <input type="text"required id="beneficiaryName" name="beneficiaryName">
 
         <label for="bankName">Bank Name:</label>
-        <input type="text" id="bankName" name="bankName">
+        <input type="text"required id="bankName" name="bankName">
 
         <label for="beneficiaryAddress">Beneficiary Address:</label>
-        <input type="text" id="beneficiaryAddress" name="beneficiaryAddress">
+        <input type="text"required id="beneficiaryAddress" name="beneficiaryAddress">
 
         <label for="amount">Amount:</label>
-        <input type="text" id="amount" name="amount">
+        <input type="text"required id="amount" name="amount">
 
         <label for="currency">Currency:</label>
-        <select id="currency" name="currency">
+        <select id="currency"required name="currency">
           <option value="">Choose Currency Type</option>
           <option value="USD">USD - United States Dollar</option>
           <option value="EUR">EUR - Euro</option>
@@ -120,33 +120,33 @@
         </select>
 
         <label for="transactionDate">Transaction Date:</label>
-        <input type="date" id="transactionDate" name="transactionDate">
+        <input type="date"required id="transactionDate" name="transactionDate">
       </div>
 
       <div id="ShowDetailsForm" class="transfer-form">
         <label for="senderAccountNumber">Sender's Account Number:</label>
-          <input type="text" id="senderAccountNumber" name="senderAccountNumber">
+          <input type="text"required id="senderAccountNumber" name="senderAccountNumber">
 
           <label for="senderName">Sender's Name:</label>
-          <input type="text" id="senderName" name="senderName">
+          <input type="text"required id="senderName" name="senderName">
 
           <label for="beneficiaryAccountNumber">Beneficiary Account Number/IBAN:</label>
-          <input type="text" id="beneficiaryAccountNumber" name="beneficiaryAccountNumber">
+          <input type="text"required id="beneficiaryAccountNumber" name="beneficiaryAccountNumber">
 
           <label for="beneficiaryName">Beneficiary Name:</label>
-          <input type="text" id="beneficiaryName" name="beneficiaryName">
+          <input type="text"required id="beneficiaryName" name="beneficiaryName">
 
           <label for="bankName">Bank Name:</label>
-          <input type="text" id="bankName" name="bankName">
+          <input type="text"required id="bankName" name="bankName">
 
           <label for="branchCountry">Branch Country:</label>
-          <input type="text" id="branchCountry" name="branchCountry">
+          <input type="text"required id="branchCountry" name="branchCountry">
 
           <label for="amount">Amount:</label>
-          <input type="text" id="amount" name="amount">
+          <input type="text"required id="amount" name="amount">
 
           <label for="currency">Currency:</label>
-          <select id="currency" name="currency">
+          <select id="currency"required name="currency">
             <option value="">Choose Currency Type</option>
             <option value="USD">USD - United States Dollar</option>
             <option value="EUR">EUR - Euro</option>
@@ -158,12 +158,5 @@
           </select>
 
           <label for="transactionDate">Transaction Date:</label>
-          <input type="date" id="transactionDate" name="transactionDate">
+          <input type="date"required id="transactionDate" name="transactionDate">
       </div>
-
-      <button type="submit" class="transferButton">Transfer</button>
-    </form>
-  </div>
-  <script src="transfer.js"></script>
-</body>
-</html>
