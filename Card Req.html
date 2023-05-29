@@ -34,13 +34,15 @@
 <link rel="stylesheet" type="text/css" href="css/drop down.css">
 <link rel="stylesheet" type="text/css" href="css/noti.css">
 <link rel="stylesheet" type="text/css" href="css/fs.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
 
   
 
 </head>
 <body style="background-color: rgb(248, 249, 250);">
+  <button onclick="goBack()" style="margin-left: 250px; width: 45px;"><i class="fas fa-arrow-left"></i></button>
+        <button onclick="goForward()"style="width: 45px;"><i class="fas fa-arrow-right"></i></button>
     <div class="header_section header_bg">
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -169,6 +171,15 @@
                     textElement.textContent = "Report type : Lost          Card Status : Inactive          Card ID : J890F";
                   }
                   </script>
+        <script>
+          function goBack() {
+            window.history.back();
+          }
+        
+          function goForward() {
+            window.history.forward();
+          }
+        </script>
         
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>

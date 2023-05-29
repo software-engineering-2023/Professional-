@@ -301,13 +301,22 @@
 			} else {
         if(username == "banker" && password == "banker")
         {
-          window.location.href = "Send Notification.html";
+          window.location.href = "Send Notification From Side.html";
         }
         else{	
-            if(username == "Nada" && password == "Nada"){
+            if(username == "client" && password == "client"){
               window.location.href = "Home.html";
             }
-            else{alert("Invalid username or password");}
+            else{
+            if(username == "client2" && password == "client2"){
+              window.location.href = "Home2.html";
+            }
+            else{
+              alert("Invalid username or password");
+            }
+              
+            
+            }
           			
             }
 			}
