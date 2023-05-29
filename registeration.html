@@ -152,11 +152,11 @@
     </div> -->
 
     <!-- Page 2: Financial Information -->
-    <div id="page2" >
+    
       <h2>Personal Information</h2>
-      <!-- <form action="#" method="POST" onsubmit="return validatePage2()"> -->
+      <form action="login.html" method="post" >
         <label for="income">First Name *</label>
-        <input type="text" id="income" name="income" required>
+        <input type="text" required id="income" name="income" required>
 
         <label for="income">Middle Name *</label>
         <input type="text" id="income" name="income" required>
@@ -175,7 +175,7 @@
         <input type="date"required id="transactionDate" name="transactionDate">
 
         <label for="income">Address *</label>
-        <input type="text" id="income" name="income" required>
+        <input type="text"  required>
 
       
 
@@ -193,15 +193,16 @@
         <input type="text" id="occupation" name="occupation" required>
 
 
-        <div class="buttons-container">
+        <!-- <div class="buttons-container"> -->
           <!-- <button type="button" class="button" onclick="showPage(1)">Previous</button> -->
-          <button type="submit" class="button" onclick="register"> Register</button>
+          <!-- <button type="submit" class="button" onclick="register"> Register</button> -->
+          <button type="submit" class="button" > Register</button>
           <!-- <a class="nav-link" href="login.html">Register</a> -->
-        </div>
+        <!-- </div> -->
 
-        <div id="page2-error" class="error-message"></div>
-      <!-- </form> -->
-    </div>
+        
+      </form>
+    
 
     <!-- Page 3: Credit Card Options -->
     <!-- <div id="page3" style="display: none;">
@@ -227,8 +228,14 @@
       </form>
     </div>
   </div> -->
-
   <script>
+    function bahy() {
+      window.location.href = "login.html";
+      location.reload();
+    }
+    </script>
+  <!-- <script> 
+  
     function register(){
 
     var successContainer = document.createElement('div');
@@ -321,6 +328,6 @@
         document.getElementById('page2').style.display = 'block';
       }
     }
-  </script>
+  </script> -->
 </body>
 </html>
