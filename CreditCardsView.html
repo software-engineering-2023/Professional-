@@ -196,71 +196,6 @@ button {
       font-size: 14px;
     }
 
-    body {
-      background-color: #F2F1EF;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-
-    h1 {
-      color: #053D57;
-    }
-
-    h2 {
-      color: #053D57;
-      text-align: left;
-    }
-
-    table {
-      margin: 20px auto;
-      background-color: #006884;
-      color: white;
-      border-collapse: collapse;
-      width: 80%;
-      
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: center;
-    }
-
-    th {
-      background-color: #053D57;
-    }
-
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    button {
-      background-color: #053D57;
-      color: white;
-      padding: 8px 15px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    caption {
-      color: #053D57;
-    }
-
-    #message {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #053D57;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 4px;
-      display: none;
-    }
-
     .error-message {
       color: red;
       font-weight: bold;
@@ -344,10 +279,12 @@ button {
   </div>
   <!--header section end -->
 
-  <h1>Online Banking - Credit Cards</h1>
+  <div class="what_we_do_section layout_padding">
+    <div class="container">
+      <h1>Online Banking - Credit Cards</h1>
 
   <table>
-    <caption>Credit Card 1</caption>
+    <!-- <caption>Credit Card 1</caption> -->
     <thead>
       <tr>
         <th>Credit Card No</th>
@@ -379,7 +316,7 @@ button {
   </table>
 
   <table>
-    <caption>Credit Card 2</caption>
+    <!-- <caption>Credit Card 2</caption> -->
     <thead>
       <tr>
         <th>Credit Card No</th>
@@ -411,7 +348,7 @@ button {
   </table>
 
   <table>
-    <caption>Credit Card 3</caption>
+    <!-- <caption>Credit Card 3</caption> -->
     <thead>
       <tr>
         <th>Credit Card No</th>
@@ -481,6 +418,8 @@ function viewTransactions(cardNumber, cardHolderName) {
       }, 7000);
     }
   </script>
+    </div>
+  </div>
   
     <!--footer section start -->
     <div class="footer_section">
