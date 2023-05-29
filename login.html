@@ -113,7 +113,7 @@
       background-color: #f8f9fa;
       color: #001f3f;
     }
-
+    input[type="password"],
     input[type="text"],
     input[type="date"],
     select {
@@ -198,10 +198,10 @@
       margin-bottom: 20px;
     }
     
-    input { -webkit-text-security: none; }
+    /* input { -webkit-text-security: none; }
     input { -webkit-text-security: circle; }
     input { -webkit-text-security: square; }
-    input { -webkit-text-security: disc; /* Default */ }
+    input { -webkit-text-security: disc;  } */
 
   </style>
 </head>
@@ -253,7 +253,7 @@
         <input type="text" id="username" name="income" required>
 
         <label for="income">Password *</label>
-        <input type="text" id="password" name="income" required>
+        <input type="password" id="password" name="income" required>
 
         <!-- <label for="income">Password:</label>
         <input type="password" style="color: black;" id="password" name="income" required>
